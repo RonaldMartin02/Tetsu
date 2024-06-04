@@ -1,0 +1,21 @@
+{
+  "name": "tetsu_pro",
+  "version": "1.0.0",
+  "description": "Site For Tetsu Pro Wrestling",
+  "main": "index.js",
+  "scripts": {
+    "start": "node Server/server.js",
+    "develop": "concurrently \"cd server && npm run watch\" \"cd client && npm run dev\"",
+    "install": "cd server && npm i && cd ../client && export NODE_ENV=development && npm i",
+    "seed": "cd server && npm run seed",
+    "build": "cd client && npm run build"
+  },
+  
+  "author": "Ronald Martin",
+  "license": "ISC",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  }
+}

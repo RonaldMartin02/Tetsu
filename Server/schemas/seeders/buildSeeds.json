@@ -1,0 +1,30 @@
+[
+    {
+        "game": "Overwatch",
+        "title": "Death Ball",
+        "body": "This allows you to become a ball of death and roll around the map killing everything in your path.",
+        "buildGenre": "Offense",
+        "username": "UnholySquid"
+    },
+    {
+        "game": "World of Warcraft",
+        "title": "Tank",
+        "body": "This build allows you to become a tank and take a lot of damage.",
+        "buildGenre": "Defense",
+        "username": "UnholySquid"
+    },
+    {
+        "game": "League of Legends",
+        "title": "Speedy",
+        "body": "This build allows you to become very fast and dodge attacks.",
+        "buildGenre": "Defense",
+        "username": "UnholySquid"
+    },
+    {
+        "game": "Halo",
+        "title": "Balanced",
+        "body": "This build allows you to have a good balance of speed, damage, and health.",
+        "buildGenre": "Defense",
+        "username": "UnholySquid"
+    }
+]
