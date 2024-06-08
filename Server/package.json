@@ -8,16 +8,8 @@
     "seed": "node seeders/seed.js",
     "watch": "nodemon server.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/mighty-little-coder/gizmo-gaming.git"
-  },
-  "author": "Ronald Martin and Jeremy Doran",
+  "author": "Ronald Martin",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/mighty-little-coder/gizmo-gaming/issues"
-  },
-  "homepage": "https://github.com/mighty-little-coder/gizmo-gaming#readme",
   "dependencies": {
     "@apollo/server": "^4.10.0",
     "bcrypt": "^5.1.1",

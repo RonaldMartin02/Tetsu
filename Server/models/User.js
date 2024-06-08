@@ -32,10 +32,6 @@ const userSchema = new Schema({
     default: Date.now 
   },
   // lastAccessed: { type: Date, default: Date.now },
-  builds: { 
-    type: Schema.Types.ObjectId,
-    ref: 'Build'
-  },
 });
 
 userSchema.pre('save', async function(next) {

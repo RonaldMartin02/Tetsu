@@ -1,23 +1,51 @@
 const { signToken, AuthenticationError } = require('../utils/auth');
 
-const { User, Game, Build } = require('../models/index');
+const { User, Post } = require('../models/index');
 
 const resolvers = {
     Query: {
-        builds: async () => {
+        posts: async () => {
             try {
-                const builds = await Build.find({}).exec();
-                console.log(builds);
-                return builds;
-            } catch (error) {
-                console.error("Error fetching builds:", error);
-                throw error; // Re-throw the error to propagate it to the GraphQL client
+                return Post.find();
+            } catch (err) {
+                console.error("Error fetching posts:", err);
             }
         },
-        build: async (parent, { buildId }) => {
-            console.log(buildId);
-            return Build.findOne({ _id: buildId });
+        post: async (parent, { postId }) => {
+            try {
+                return Post.findOne({ _id: postId });
+            } catch (err) {
+                console.error("Error fetching post:", err);
+            }
+        },
+        users: async () => {
+            try {
+                return User.find();
+            } catch (err) {
+                console.error("Error fetching users:", err);
+            }
+        },
+        user: async (parent, { _id }) => {
+            try {
+                return User.findOne({ _id: _id });
+            } catch (err) {
+                console.error("Error fetching user:", err);
+            }
+        },
+        items: async () => {
+            try {
+                return Item.find();
+            } catch (err) {
+                console.error("Error fetching items:", err);
+            }
+        },
+        item: async (parent, { itemId }) => {
+            try {
+            return Item.findOne({ _id: itemId })
+        } catch (err) {
+            console.error("Error fetching item:", err);
         }
+    },
     },
     Mutation: {
         login: async (parent, { email, password }) => {
@@ -41,30 +69,45 @@ const resolvers = {
             const token = signToken(user);
             return { token, user };
         },
-        addBuild: async (parent, args) => {
-            return Build.create(args);
-        },
-        editBuild: async (parent, args) => {
-            return Build.findByIdAndUpdate(
-                args._id,
-                { $set: { ...args } },
-                { new: true }
-            );
-        },
-        removeBuild: async (parent, { buildId }) => {
-            return Build.findByIdAndDelete(buildId);
-    },
-
-    addComment: async (parent, { buildId, commentBody, username }) => {
-        return Build.findByIdAndUpdate(buildId, {
-            $push: { comments: { commentBody, username } },
-        },
-            {
-                new: true,
-                runValidators: true,
+        addPost: async (parent, args) => {
+            try {
+                return Post.create(args);
+            } catch (err) {
+                console.error("Error creating post:", err);
             }
-        );
-    }
+        },
+        editPost: async (parent, { _id, title, body }) => {
+            try {
+                return Post.findOneAndUpdate
+                    (
+                        { _id: _id },
+                        { title, body },
+                        { new: true }
+                    );
+            } catch (err) {
+                console.error("Error updating post:", err);
+            }
+        },
+        removePost: async (parent, { postId }) => {
+            try {
+                return Post.findOneAndDelete({ _id: postId });
+            } catch (err) {
+                console.error("Error deleting post:", err);
+            }
+        },
+        addItems: async (parent, args) => {
+            try {
+                return Item.create(args);
+            } catch (err) {
+                console.error("Error creating item:", err);
+            }
+        },
+        editItems: async (parent, { _id, name, price, description, category, quantity }) => {
+            try {
+            }
+            
+
+
 }
 };
 

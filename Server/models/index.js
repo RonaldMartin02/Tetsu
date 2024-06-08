@@ -1,7 +1,6 @@
-const Game = require('./futureRelease/Game');
 const User = require('./User');
-const Build = require('./Build');
-const Tag = require('./futureRelease/Tag');
+const Post = require('./Post');
+const Item = require('./Item');
 
 
-module.exports = { Game, User, Build, Tag };
+module.exports = { User, Post, Item };

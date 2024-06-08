@@ -1,10 +1,70 @@
-import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
-import './index.css'
+import './index.scss'
 
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import Landing from './pages/Landing'
+import About from './pages/About'
+import Post from './pages/Post'
+import CreatePost from './pages/CreatePost'
+import EditPost from './pages/EditPost'
+import LogIn from './pages/LogIn'
+import SignUp from './pages/SignUp'
+import Roster from './pages/Roster'
+import Shop from './pages/Shop'
+import Cart from './pages/Cart'
+
+const router = createBrowserRouter(
+  [
+    { path: '/',
+    element: <App />,
+    // errorElement: <ErrorPage />,
+    children: [
+      {
+        index: true,
+        element: <Landing/>,
+      },
+      {
+        path: '/AboutUs',
+        element: <About />,
+      },
+      {
+        path: '/Post/:postId',
+        element: <Post />,
+      },
+      {
+        path: '/Post/Create',
+        element: <CreatePost />,
+      },
+      {
+        path: '/Post/Edit/:postId',
+        element: <EditPost />,
+      },
+      {
+        path: '/LogIn',
+        element: <LogIn />,
+      },
+      {
+        path: '/SignUp',
+        element: <SignUp />,
+      },
+      {
+        path: '/Roster',
+        element: <Roster />,
+      },
+      {
+        path: '/Shop',
+        element: <Shop />,
+      },
+      {
+        path: '/Cart',
+        element: <Cart />,
+      },
+
+    ],
+    },
+  ]
 )
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <RouterProvider router={router} />
+);
