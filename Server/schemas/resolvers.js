@@ -102,9 +102,9 @@ const resolvers = {
                 console.error("Error creating item:", err);
             }
         },
-        editItems: async (parent, { _id, name, price, description, category, quantity }) => {
-            try {
-            }
+        // editItems: async (parent, { _id, name, price, description, category, quantity }) => {
+        //     try {
+        //     }
             
 
 
