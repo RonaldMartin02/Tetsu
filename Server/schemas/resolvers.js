@@ -95,19 +95,31 @@ const resolvers = {
                 console.error("Error deleting post:", err);
             }
         },
-        addItems: async (parent, args) => {
+        addItem: async (parent, args) => {
             try {
                 return Item.create(args);
             } catch (err) {
                 console.error("Error creating item:", err);
             }
         },
-        // editItems: async (parent, { _id, name, price, description, category, quantity }) => {
-        //     try {
-        //     }
-            
-
-
+        removeItem: async (parent, { itemId }) => {
+            try { return Item.findOneAndDelete({ _id: itemId});
+            }
+            catch (err) {
+                console.error("Error deleting item:", err);
+            }
+        },
+        editItem: async (parent, { _id, name, price, description, category, quantity }) => {
+            try {
+                return Item.findOneAndUpdate(
+                    { _id: _id },
+                    { name, price, description, category, quantity },
+                    { new: true }
+                );
+            } catch (err) {
+                console.error("Error updating item:", err);
+            }    
+        }
 }
 };
 

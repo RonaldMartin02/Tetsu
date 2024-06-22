@@ -7,9 +7,10 @@ import { EDIT_BUILD } from '../utils/mutations';
 import { GET_BUILD } from '../utils/queries';
 import { useParams } from 'react-router-dom';
 import Auth from '../utils/auth';
-import './scss/Editbuild.scss';
+import './scss/EditPost.scss';
 export default function Createbuild() {
     const navigate = useNavigate();
+    console.log("EditPost");
 
     const { postId } = useParams();
     const { loading, data } = useQuery(GET_BUILD, {

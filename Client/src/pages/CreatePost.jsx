@@ -5,7 +5,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { ADD_BUILD } from '../utils/mutations';
 import { GET_ALL_BUILDS } from '../utils/queries';
 
-import './scss/Createbuild.scss';
+import './scss/CreatePost.scss';
 import Auth from '../utils/auth';
 
 export default function Createbuild() {

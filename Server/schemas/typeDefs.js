@@ -20,10 +20,10 @@ type Post {
 type Item {
     _id: ID
     name: String
-    price: Number
+    price: Float
     description: String
     category: String
-    quantity: Number    
+    quantity: Int    
 }
 
 type Query {
@@ -54,20 +54,20 @@ type Mutation {
     ): Post
     removePost(postId: ID!): Post
     
-    addItems(
+    addItem(
         name: String!
-        price: Number!
+        price: Float!
         description: String!
         category: String!
-        quantity: Number!
+        quantity: Int!
     ): Item
     editItem(
         _id: ID!
         name: String
-        price: Number
+        price: Float
         description: String
         category: String
-        quantity: Number
+        quantity: Int
     ): Item
     removeItem(itemId: ID!): Item
     }
