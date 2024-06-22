@@ -1,4 +1,71 @@
-img{
-    max-width: 100px;
-    height: auto;
+.Roster{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    &_Champ{
+        display: flex;
+        flex-direction: row;
+        &_Left{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            // margin-right: 50px;
+            &_img{
+                width: 200px;
+                height: 200px;
+                border-radius: 50%;
+            }
+        }
+        &_Right{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            // margin-left: 50px;
+            &_Type{
+                font-size: 20px;
+                font-weight: bold;
+            }
+            &_Name{
+                font-size: 30px;
+                font-weight: bold;
+            }
+        }    
+    }
+    &_Wrestlers{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        &_Left{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 10px;
+            &_img{
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+            }
+        }
+        &_Right{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 10px;
+            &_Name{
+                font-size: 20px;
+                font-weight: bold;
+            }
+        }
+    }
 }

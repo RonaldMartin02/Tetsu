@@ -30,30 +30,37 @@ export default function Roster() {
             img : Skylar,
             name: 'Skylar',
         },
-        {
-            img : Troy,
-            name: 'Troy',
-        },
+        // {
+        //     img : Troy,
+        //     name: 'Troy',
+        // },
         {
             img : Xander,
             name: 'Xander',
         },
     ]
     return (
-        <div>
+        <div className='Roster'>
             <h1>Roster</h1>
-            <div>
-                <img src={Troy}/>
-                <h2>Tetsu Pro Champion</h2>
-                <h3>Troy Stevens</h3>
+            <div className='Roster_Champ'>
+                <div className='Roster_Champ_Left'>
+                <img src={Troy} className='Roster_Champ_Left_img'/>
+                </div>
+                <div className='Roster_Champ_Right'>
+                <h2 className='Roster_Champ_Right_Type'>Tetsu Pro Champion</h2>
+                <h3 className='Roster_Champ_Right_name'>Troy Stevens</h3>
+                </div>
             </div>
             {console.log(roster)}
             {roster.map(wrestler =>{
                 return(
-                <div key={wrestler.name}>
-                    <img src={wrestler.img} alt={wrestler.name}/>
-                    <h2>{wrestler.name}</h2>
-                    <h3>This works</h3>
+                <div className='Roster_Wrestlers' key={wrestler.name}>
+                    <div className='Roster_Wrestlers_Left'>
+                    <img src={wrestler.img} alt={wrestler.name} className='Roster_Wrestlers_Left_img'/>
+                    </div>
+                    <div className='Roster_Wrestlers_Right'>
+                    <h2 className='Roster_Wrestlers_Right_Name'>{wrestler.name}</h2>
+                    </div>
                 </div>)
             })}
         </div>
