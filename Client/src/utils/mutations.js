@@ -1,5 +1,5 @@
 import { gql } from '@apollo/client';
-
+//Login and User Mutations
 export const LOGIN_USER = gql`
 mutation login($email: String!, $password: String!) {
   login(email: $email, password: $password) {
@@ -22,47 +22,54 @@ mutation addUser($username: String!, $email: String!, $password: String!) {
   }
 }
 `;
-export const ADD_BUILD = gql`
-mutation AddBuild($title: String!, $game: String!, $body: String!, $username: String!) {
-  addBuild(title: $title, game: $game, body: $body, username: $username) {
+
+//POST MUTATIONS
+export const ADD_POST = gql`
+mutation AddPost($title: String!, $postType: String!, $body: String!, $username: String!) {
+  addPost(title: $title, PostType: $postType, body: $body, username: $username) {
+    PostType
     _id
-    title
-    game
     body
+    postDate
+    title
     username
   }
 }
 `;
-export const EDIT_BUILD = gql`
-mutation EditBuild($id: ID!, $title: String, $game: String, $body: String) {
-  editBuild(_id: $id, title: $title, game: $game, body: $body) {
-    _id
+export const EDIT_POST = gql`
+mutation EditPost($id: ID!, $body: String, $postType: String, $title: String) {
+  editPost(_id: $id, body: $body, PostType: $postType, title: $title) {
+    PostType
+    body
+    postDate
     title
     username
-    game
-    body
+    _id
   }
 }
 `;
-export const REMOVE_BUILD = gql`
-mutation RemoveBuild($buildId: ID!) {
-  removeBuild(buildId: $buildId) {
+export const REMOVE_POST = gql`
+mutation RemovePost($postId: ID!) {
+  removePost(postId: $postId) {
     _id
+    PostType
+    body
+    postDate
     title
+    username
   }
 }
 `;
 
+//ITEM MUTATIONS
 export const ADD_COMMENT = gql`
-mutation AddComment($buildId: ID!, $commentBody: String!, $username: String!) {
-  addComment(buildId: $buildId, commentBody: $commentBody, username: $username) {
-    body
-    _id
-    buildGenre
-    comments {
-      username
-      commentBody
-    }
+mutation AddItem($name: String!, $price: Float!, $description: String!, $category: String!, $quantity: Int!) {
+  addItem(name: $name, price: $price, description: $description, category: $category, quantity: $quantity) {
+    category
+    description
+    price
+    quantity
+    name
   }
 }
 `;

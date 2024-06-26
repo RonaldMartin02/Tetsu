@@ -3,69 +3,85 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    // margin-top: 50px;
+    // margin-bottom: 50px;
     &_Champ{
         display: flex;
         flex-direction: row;
         &_Left{
+            border: 1px solid black;
             display: flex;
             flex-direction: column;
-            align-items: center;
-            justify-content: center;
+            align-items: end;
+            justify-content: end;
             // margin-right: 50px;
+            width: 50%;
             &_img{
-                width: 200px;
-                height: 200px;
-                border-radius: 50%;
+                justify-content: end;
+                align-items: end;
+                width: 40%;
             }
         }
         &_Right{
+            border: 1px solid black;
             display: flex;
             flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            // margin-left: 50px;
+            align-items: start;
+            justify-content: start;
+            width: 50%;
             &_Type{
-                font-size: 20px;
+                font-size: 2rem;
                 font-weight: bold;
+                border: 1px solid black;
+                padding: 10px;
             }
             &_Name{
-                font-size: 30px;
+                font-size: 1.5rem;
                 font-weight: bold;
             }
         }    
     }
+    
     &_Wrestlers{
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        flex-wrap: wrap;
-        margin-top: 50px;
-        margin-bottom: 50px;
+        // flex-wrap: wrap;
+        // margin-top: 50px;
+        // margin-bottom: 50px;
         &_Left{
             display: flex;
-            flex-direction: column;
-            align-items: center;
+            // width: 50%;
+            flex-direction: row;
+            // align-items: center;
             justify-content: center;
             margin: 10px;
             &_img{
-                width: 100px;
-                height: 100px;
-                border-radius: 50%;
+                width: 50%;
+                // height: 25%;
             }
         }
         &_Right{
             display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
+            // width: 50%;
+            flex-direction: row;
+            // align-items: start;
+            // justify-content: start;
             margin: 10px;
             &_Name{
-                font-size: 20px;
+                font-size: 3em;
                 font-weight: bold;
             }
         }
+    }
+    &_Group{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        
     }
 }

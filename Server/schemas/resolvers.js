@@ -1,6 +1,6 @@
 const { signToken, AuthenticationError } = require('../utils/auth');
 
-const { User, Post } = require('../models/index');
+const { User, Item, Post } = require('../models/index');
 
 const resolvers = {
     Query: {
@@ -76,12 +76,12 @@ const resolvers = {
                 console.error("Error creating post:", err);
             }
         },
-        editPost: async (parent, { _id, title, body }) => {
+        editPost: async (parent, { _id, title, body, postType }) => {
             try {
                 return Post.findOneAndUpdate
                     (
                         { _id: _id },
-                        { title, body },
+                        { title, body, postType },
                         { new: true }
                     );
             } catch (err) {
