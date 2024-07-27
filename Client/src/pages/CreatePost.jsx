@@ -2,8 +2,8 @@ import { useState } from 'react';
 import { useMutation } from '@apollo/client';
 import { Link, useNavigate } from 'react-router-dom';
 
-import { ADD_BUILD } from '../utils/mutations';
-import { GET_ALL_BUILDS } from '../utils/queries';
+//import { ADD_BUILD } from '../utils/mutations';
+//import { GET_ALL_BUILDS } from '../utils/queries';
 
 import './scss/CreatePost.scss';
 import Auth from '../utils/auth';

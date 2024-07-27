@@ -12,19 +12,19 @@ export default function Roster() {
     const roster = [
         {
             img: Ichi,
-            name: 'Ichi',
+            name: 'Ichiban',
         },
         {
             img: Jermaine,
-            name: 'Jermaine',
+            name: 'Jermaine Marbury',
         },
         {
             img: Jorge,
-            name: 'Jorge',
+            name: 'Jorge Santi',
         },
         {
             img: Sammy,
-            name: 'Sammy',
+            name: 'Sammy Diaz',
         },
         {
             img: Skylar,
@@ -32,16 +32,12 @@ export default function Roster() {
         },
         {
             img: Troy,
-            name: 'Troy',
+            name: 'Troy Stevens',
         },
         {
             img: Xander,
-            name: 'XanderLitt',
+            name: 'Xander Litt',
         },
-        {
-            img: Ichi,
-            name: 'Ichi',
-        }
     ];
 
     const groupedWrestlers = roster.reduce((acc, wrestler, index) => {

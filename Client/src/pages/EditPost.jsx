@@ -3,8 +3,8 @@ import { Link, useNavigate } from 'react-router-dom';
 
 import { useMutation } from '@apollo/client';
 import { useQuery } from '@apollo/client';
-import { EDIT_BUILD } from '../utils/mutations';
-import { GET_BUILD } from '../utils/queries';
+//import { EDIT_BUILD } from '../utils/mutations';
+//import { GET_BUILD } from '../utils/queries';
 import { useParams } from 'react-router-dom';
 import Auth from '../utils/auth';
 import './scss/EditPost.scss';

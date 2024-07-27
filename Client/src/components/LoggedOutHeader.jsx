@@ -49,7 +49,7 @@ export default function Header() {
           </Link>
         </div>
         <div className='Header_Right'>
-          <Link to='/'><button>Shows</button></Link>
+          <Link to='/Shows'><button>Shows</button></Link>
           <Link to='/Signup'><button>About Us</button></Link>
         </div>
       </header>
