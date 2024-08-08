@@ -1,0 +1,53 @@
+.Shows{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.Show{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    padding: 10px;
+    background-color: #2d2d2d;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    &_Header{
+        background-color: #232323;
+        border-radius: 10px;
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+        &_img{
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        &_Name{
+            font-size: 1.5rem;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+    }
+    &_Info{
+        background-color: #232323;
+        border-radius: 10px;
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+        font-size: 1.5rem;
+        &_Left{
+            font-size: 1.5rem;
+            &_Date{
+                font-size: 1.5rem;
+            }
+            &_Time{
+                font-size: 1.5rem;
+            }
+        }
+        &_Right{
+            font-size: 1.5rem;
+            &_Location{
+                font-size: 1.5rem;
+            }
+        }
+    }
+}
