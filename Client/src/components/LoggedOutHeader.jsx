@@ -50,7 +50,7 @@ export default function Header() {
         </div>
         <div className='Header_Right'>
           <Link to='/Shows'><button>Shows</button></Link>
-          <Link to='/Signup'><button>About Us</button></Link>
+          <Link to='/Aboutus'><button>About Us</button></Link>
         </div>
       </header>
     )
