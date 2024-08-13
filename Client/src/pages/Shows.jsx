@@ -173,19 +173,27 @@ export default function Shows() {
                                 const match = show.Results[matchKey];
                                 if (match.Type === "Four Way") {
                                     return (
-                                        <div key={matchKey}>
-                                            <h2>{match.Type}</h2>
-                                            <h3>{match.Wrestlers.P1} {match.Wrestlers.P2 ? `vs ${match.Wrestlers.P2}` : ''} {match.Wrestlers.P3 ? `vs ${match.Wrestlers.P3}` : ''} {match.Wrestlers.P4 ? `vs ${match.Wrestlers.P4}` : ''}</h3>
-                                            <h4>Winner: {match.Winner}</h4>
+                                        <div className='Match' key={matchKey}>
+                                            <h2 className='Show_Results_Match_Type'>{match.Type}</h2>
+                                            <h3 className='Show_Results_Match_Wrestlers'>
+                                                <span className='Show_Results_Match_Wrestlers_1'>{match.Wrestlers.P1} </span> 
+                                                <span className='Show_Results_Match_Wrestlers_2'>{match.Wrestlers.P2 ? `vs ${match.Wrestlers.P2}` : ''} </span>
+                                                <span className='Show_Results_Match_Wrestlers_3'>{match.Wrestlers.P3 ? `vs ${match.Wrestlers.P3}` : ''} </span>
+                                                <span className='Show_Results_Match_Wrestlers_4'>{match.Wrestlers.P4 ? `vs ${match.Wrestlers.P4}` : ''}</span>
+                                                   </h3>
+                                            <h4>Winner: <span className='Show_Results_Match_Winner'>{match.Winner}</span></h4>
                                         </div>
                                     );
                                 }
                                 else {
                                     return (
-                                        <div key={matchKey}>
-                                            <h2>{match.Type}</h2>
-                                            <h3>{match.Wrestlers.P1} {match.Wrestlers.P2 ? `vs ${match.Wrestlers.P2}` : ''}</h3>
-                                            <h4>Winner: {match.Winner}</h4>
+                                        <div className='Show_Results_Match' key={matchKey}>
+                                            <h2 className='Show_Results_Match_Type'>{match.Type}</h2>
+                                            <h3 className='Show_Results_Match_Wrestlers'>
+                                                <span className='Show_Results_Match_Wrestlers_1'>{match.Wrestlers.P1} </span> 
+                                                <span className='Show_Results_Match_Wrestlers_2'>{match.Wrestlers.P2 ? `vs ${match.Wrestlers.P2}` : ''}</span>
+                                                </h3>
+                                                <h4>Winner: <span className='Show_Results_Match_Winner'>{match.Winner}</span></h4>
                                         </div>
                                     );
                                 }
