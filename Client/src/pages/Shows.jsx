@@ -1,7 +1,14 @@
 
+import {useNavigate } from 'react-router-dom';
+
 import ChapBlack from '../assets/Img/Chapter_Black.jpg';
 import TheRealFolkBlues from '../assets/Img/The_Real_Folk_Blues_Words.jpg';
 import './scss/Shows.scss';
+const navigate = useNavigate();
+const handleButtonClick(videoId)
+{
+    navigate(`/Video/${videoId}`)
+}
 export default function Shows() {
     const ShowList = [
         {
@@ -19,7 +26,8 @@ export default function Shows() {
                         P3: "Damien Black",
                         P4: "Allin Bayno"
                     },
-                    Winner: "Bobby Ocean"
+                    Winner: "Bobby Ocean",
+                    videoId:"NSqv-zHy-vY?si=xT9Q2Fd3AZSmtxp8"
                 },
                 Match2: {
                     Type: "Singles",
@@ -182,6 +190,7 @@ export default function Shows() {
                                                 <span className='Show_Results_Match_Wrestlers_4'>{match.Wrestlers.P4 ? `vs ${match.Wrestlers.P4}` : ''}</span>
                                                    </h3>
                                             <h4>Winner: <span className='Show_Results_Match_Winner'>{match.Winner}</span></h4>
+                                            <button onClick={handleButtonClick(match.videoId)}>Go to Video</button>
                                         </div>
                                     );
                                 }
