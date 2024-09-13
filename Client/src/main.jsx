@@ -14,6 +14,7 @@ import Roster from './pages/Roster'
 import Shop from './pages/Shop.jsx'
 import Cart from './pages/Cart'
 import Shows from './pages/Shows'
+import Video from './pages/Video'
 
 const router = createBrowserRouter(
   [
@@ -64,6 +65,10 @@ const router = createBrowserRouter(
       {
         path: '/Shows',
         element: <Shows />,
+      },
+      {
+        path: '/Shows/:videoId',
+        element: <Video />,
       }
 
     ],
