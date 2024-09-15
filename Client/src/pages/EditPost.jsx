@@ -3,15 +3,14 @@ import { Link, useNavigate } from 'react-router-dom';
 
 import { useMutation } from '@apollo/client';
 import { useQuery } from '@apollo/client';
-//import { EDIT_BUILD } from '../utils/mutations';
-//import { GET_BUILD } from '../utils/queries';
+import { EDIT_POST } from '../utils/mutations';
+import { GET_POST } from '../utils/queries';
 import { useParams } from 'react-router-dom';
 import Auth from '../utils/auth';
 import './scss/EditPost.scss';
-export default function Createbuild() {
+export default function EditPost() {
     const navigate = useNavigate();
     console.log("EditPost");
-
     const { postId } = useParams();
     const { loading, data } = useQuery(GET_BUILD, {
         variables: { buildId: buildId },
@@ -24,11 +23,11 @@ export default function Createbuild() {
     
     // const [buildGenre, setGenre] = useState('');
     const [characterCount, setCharacterCount] = useState(0);
-    const [editBuild, { error }] = useMutation(EDIT_BUILD,
+    const [editBuild, { error }] = useMutation(EDIT_POST,
         {
             refetchQueries:
                 [
-                    GET_BUILD,
+                    GET_POST,
                     'getBuild'
                 ]
         });
@@ -37,7 +36,7 @@ export default function Createbuild() {
         event.preventDefault();
         console.log(postTitle, postText, postGame, Auth.getProfile().data.username);
         try {
-            const { data } = await editBuild({
+            const { data } = await editPOST({
                 variables: {
                     title: postTitle,
                     body: postText,

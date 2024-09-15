@@ -1,26 +1,25 @@
 import { useState } from 'react';
 import { useMutation } from '@apollo/client';
 import { Link, useNavigate } from 'react-router-dom';
-
-//import { ADD_BUILD } from '../utils/mutations';
-//import { GET_ALL_BUILDS } from '../utils/queries';
+import { ADD_POST } from '../utils/mutations';
+import { GET_ALL_POSTS } from '../utils/queries';
 
 import './scss/CreatePost.scss';
 import Auth from '../utils/auth';
 
-export default function Createbuild() {
+export default function CreatePost() {
     const navigate = useNavigate();
     const [postText, setPostText] = useState('');
     const [postTitle, setPostTitle] = useState('');
     const [postGame, setGame] = useState('');
     // const [buildGenre, setGenre] = useState('');
     const [characterCount, setCharacterCount] = useState(0);
-    const [addBuild, { error }] = useMutation(ADD_BUILD,
+    const [addBuild, { error }] = useMutation(ADD_POST,
         {
             refetchQueries:
                 [
-                    GET_ALL_BUILDS,
-                    'getBuilds'
+                    GET_ALL_POSTS,
+                    'getPosts'
                 ]
         });
 
@@ -40,7 +39,7 @@ export default function Createbuild() {
             console.log(data);
 
             setPostText('');
-           navigate('/')
+        //    navigate('/')
 
 
         } catch (err) {
