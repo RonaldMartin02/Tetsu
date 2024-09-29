@@ -1,14 +1,9 @@
 
-import {useNavigate } from 'react-router-dom';
+import {Link, useNavigate } from 'react-router-dom';
 
 import ChapBlack from '../assets/Img/Chapter_Black.jpg';
 import TheRealFolkBlues from '../assets/Img/The_Real_Folk_Blues_Words.jpg';
-import './scss/Shows.scss';
-const navigate = useNavigate();
-const handleButtonClick(videoId)
-{
-    navigate(`/Video/${videoId}`)
-}
+
 export default function Shows() {
     const ShowList = [
         {
@@ -27,7 +22,7 @@ export default function Shows() {
                         P4: "Allin Bayno"
                     },
                     Winner: "Bobby Ocean",
-                    videoId:"NSqv-zHy-vY?si=xT9Q2Fd3AZSmtxp8"
+                    videoId:"https://www.youtube.com/watch?v=NSqv-zHy-vY"
                 },
                 Match2: {
                     Type: "Singles",
@@ -35,7 +30,8 @@ export default function Shows() {
                         P1: "Sammy Diaz",
                         P2: "Pretty Papi"
                     },
-                    Winner: "Sammy Diaz"
+                    Winner: "Sammy Diaz",
+                    videoId:"https://www.youtube.com/watch?v=GhGbzImE5HA"
                 },
                 Match3: {
                     Type: "Tag Match",
@@ -43,7 +39,8 @@ export default function Shows() {
                         P1: "The Mission",
                         P2: "The Unleashed"
                     },
-                    Winner: "The Mission"
+                    Winner: "The Mission",
+                    videoId:"https://www.youtube.com/watch?v=ofzbx_fs6Ao"
                 },
                 Match4: {
                     Type: "Singles",
@@ -51,7 +48,8 @@ export default function Shows() {
                         P1: "Lucas Chase",
                         P2: "Ryan Fraust"
                     },
-                    Winner: "Lucas Chase"
+                    Winner: "Lucas Chase",
+                    videoId:"https://www.youtube.com/watch?v=OsVG6eoHGO4"
                 },
                 Match5: {
                     Type: "Singles",
@@ -59,7 +57,8 @@ export default function Shows() {
                         P1: "Xander Litt",
                         P2: "Jay Bryxx"
                     },
-                    Winner: "Xander Litt"
+                    Winner: "Xander Litt",
+                    videoId:"https://www.youtube.com/watch?v=jBUeXP8fzrM"
                 },
                 Match6: {
                     Type: "Singles",
@@ -67,7 +66,8 @@ export default function Shows() {
                         P1: "Tiffani Avatar",
                         P2: "Skylar"
                     },
-                    Winner: "Skylar"
+                    Winner: "Skylar",
+                    videoId:"https://www.youtube.com/watch?v=1hAWSFoFs04"
                 },
                 Match7: {
                     Type: "Championship",
@@ -75,7 +75,8 @@ export default function Shows() {
                         P1: "Troy Stevens",
                         P2: "Patrick Saint"
                     },
-                    Winner: "Patrick Saint"
+                    Winner: "Patrick Saint",
+                    videoId:"https://www.youtube.com/watch?v=nGokTN5JQsA"
                 },
 
             }
@@ -190,7 +191,9 @@ export default function Shows() {
                                                 <span className='Show_Results_Match_Wrestlers_4'>{match.Wrestlers.P4 ? `vs ${match.Wrestlers.P4}` : ''}</span>
                                                    </h3>
                                             <h4>Winner: <span className='Show_Results_Match_Winner'>{match.Winner}</span></h4>
-                                            <button onClick={handleButtonClick(match.videoId)}>Go to Video</button>
+                                            <Link to={match.videoId} target='_blank'>
+                                            <button>Go to Video</button>
+                                            </Link>
                                         </div>
                                     );
                                 }
@@ -203,6 +206,9 @@ export default function Shows() {
                                                 <span className='Show_Results_Match_Wrestlers_2'>{match.Wrestlers.P2 ? `vs ${match.Wrestlers.P2}` : ''}</span>
                                                 </h3>
                                                 <h4>Winner: <span className='Show_Results_Match_Winner'>{match.Winner}</span></h4>
+                                                <Link to={match.videoId} target='_blank'>
+                                            <button>Go to Video</button>
+                                            </Link>
                                         </div>
                                     );
                                 }
