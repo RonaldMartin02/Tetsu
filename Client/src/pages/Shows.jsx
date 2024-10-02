@@ -1,8 +1,9 @@
 
-import {Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 import ChapBlack from '../assets/Img/Chapter_Black.jpg';
 import TheRealFolkBlues from '../assets/Img/The_Real_Folk_Blues_Words.jpg';
+import './scss/Shows.scss';
 
 export default function Shows() {
     const ShowList = [
@@ -22,7 +23,7 @@ export default function Shows() {
                         P4: "Allin Bayno"
                     },
                     Winner: "Bobby Ocean",
-                    videoId:"https://www.youtube.com/watch?v=NSqv-zHy-vY"
+                    videoId: "https://www.youtube.com/watch?v=NSqv-zHy-vY"
                 },
                 Match2: {
                     Type: "Singles",
@@ -31,7 +32,7 @@ export default function Shows() {
                         P2: "Pretty Papi"
                     },
                     Winner: "Sammy Diaz",
-                    videoId:"https://www.youtube.com/watch?v=GhGbzImE5HA"
+                    videoId: "https://www.youtube.com/watch?v=GhGbzImE5HA"
                 },
                 Match3: {
                     Type: "Tag Match",
@@ -40,7 +41,7 @@ export default function Shows() {
                         P2: "The Unleashed"
                     },
                     Winner: "The Mission",
-                    videoId:"https://www.youtube.com/watch?v=ofzbx_fs6Ao"
+                    videoId: "https://www.youtube.com/watch?v=ofzbx_fs6Ao"
                 },
                 Match4: {
                     Type: "Singles",
@@ -49,7 +50,7 @@ export default function Shows() {
                         P2: "Ryan Fraust"
                     },
                     Winner: "Lucas Chase",
-                    videoId:"https://www.youtube.com/watch?v=OsVG6eoHGO4"
+                    videoId: "https://www.youtube.com/watch?v=OsVG6eoHGO4"
                 },
                 Match5: {
                     Type: "Singles",
@@ -58,7 +59,7 @@ export default function Shows() {
                         P2: "Jay Bryxx"
                     },
                     Winner: "Xander Litt",
-                    videoId:"https://www.youtube.com/watch?v=jBUeXP8fzrM"
+                    videoId: "https://www.youtube.com/watch?v=jBUeXP8fzrM"
                 },
                 Match6: {
                     Type: "Singles",
@@ -67,7 +68,7 @@ export default function Shows() {
                         P2: "Skylar"
                     },
                     Winner: "Skylar",
-                    videoId:"https://www.youtube.com/watch?v=1hAWSFoFs04"
+                    videoId: "https://www.youtube.com/watch?v=1hAWSFoFs04"
                 },
                 Match7: {
                     Type: "Championship",
@@ -76,7 +77,7 @@ export default function Shows() {
                         P2: "Patrick Saint"
                     },
                     Winner: "Patrick Saint",
-                    videoId:"https://www.youtube.com/watch?v=nGokTN5JQsA"
+                    videoId: "https://www.youtube.com/watch?v=nGokTN5JQsA"
                 },
 
             }
@@ -96,15 +97,17 @@ export default function Shows() {
                         P3: "Jorge Santi",
                         P4: "Dash"
                     },
-                    Winner: "Jorge Santi"
-                },
+                    Winner: "Jorge Santi",
+                    videoId:"https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley"
+                                },
                 Match2: {
                     Type: "Singles",
                     Wrestlers: {
                         P1: "Sgt. Fury",
                         P2: "Pretty Papi"
                     },
-                    Winner: "Pretty Papi"
+                    Winner: "Pretty Papi",
+                    videoId:"https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley"
                 },
                 Match3: {
                     Type: "Singles",
@@ -112,7 +115,8 @@ export default function Shows() {
                         P1: "Stan Micheal",
                         P2: "Danny Atom"
                     },
-                    Winner: "Stan Micheal"
+                    Winner: "Stan Micheal",
+                    videoId:"https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley"
                 },
                 Match4: {
                     Type: "Tag Match",
@@ -120,7 +124,8 @@ export default function Shows() {
                         P1: "The Haven",
                         P2: "God's Greatest Creation"
                     },
-                    Winner: "God's Greatest Creation"
+                    Winner: "God's Greatest Creation",
+                    videoId:"https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley"
                 },
                 Match5: {
                     Type: "Singles",
@@ -128,7 +133,8 @@ export default function Shows() {
                         P1: "Perry Von Vicious",
                         P2: "Patrick Saint",
                     },
-                    Winner: "Patrick Saint"
+                    Winner: "Patrick Saint",
+                    videoId:"https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley"
                 },
                 Match6: {
                     Type: "Singles",
@@ -136,7 +142,8 @@ export default function Shows() {
                         P1: "Ichiban",
                         P2: "Sammy Diaz",
                     },
-                    Winner: "Sammy Diaz"
+                    Winner: "Sammy Diaz",
+                    videoId:"https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley"
                 },
                 Match7: {
                     Type: "Tag Team",
@@ -144,7 +151,8 @@ export default function Shows() {
                         P1: "Hustle & Muscle",
                         P2: "Cold Cash",
                     },
-                    Winner: "Lucas Chase"
+                    Winner: "Lucas Chase",
+                    videoId:"https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley"
                 },
                 Match8: {
                     Type: "Singles",
@@ -152,7 +160,8 @@ export default function Shows() {
                         P1: "Troy Stevens",
                         P2: "",
                     },
-                    Winner: "Troy Stevens"
+                    Winner: "Troy Stevens",
+                    videoId:"https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley"
                 },
             }
         }
@@ -185,14 +194,14 @@ export default function Shows() {
                                         <div className='Match' key={matchKey}>
                                             <h2 className='Show_Results_Match_Type'>{match.Type}</h2>
                                             <h3 className='Show_Results_Match_Wrestlers'>
-                                                <span className='Show_Results_Match_Wrestlers_1'>{match.Wrestlers.P1} </span> 
+                                                <span className='Show_Results_Match_Wrestlers_1'>{match.Wrestlers.P1} </span>
                                                 <span className='Show_Results_Match_Wrestlers_2'>{match.Wrestlers.P2 ? `vs ${match.Wrestlers.P2}` : ''} </span>
                                                 <span className='Show_Results_Match_Wrestlers_3'>{match.Wrestlers.P3 ? `vs ${match.Wrestlers.P3}` : ''} </span>
                                                 <span className='Show_Results_Match_Wrestlers_4'>{match.Wrestlers.P4 ? `vs ${match.Wrestlers.P4}` : ''}</span>
-                                                   </h3>
+                                            </h3>
                                             <h4>Winner: <span className='Show_Results_Match_Winner'>{match.Winner}</span></h4>
                                             <Link to={match.videoId} target='_blank'>
-                                            <button>Go to Video</button>
+                                                <button>Go to Video</button>
                                             </Link>
                                         </div>
                                     );
@@ -202,12 +211,12 @@ export default function Shows() {
                                         <div className='Show_Results_Match' key={matchKey}>
                                             <h2 className='Show_Results_Match_Type'>{match.Type}</h2>
                                             <h3 className='Show_Results_Match_Wrestlers'>
-                                                <span className='Show_Results_Match_Wrestlers_1'>{match.Wrestlers.P1} </span> 
+                                                <span className='Show_Results_Match_Wrestlers_1'>{match.Wrestlers.P1} </span>
                                                 <span className='Show_Results_Match_Wrestlers_2'>{match.Wrestlers.P2 ? `vs ${match.Wrestlers.P2}` : ''}</span>
-                                                </h3>
-                                                <h4>Winner: <span className='Show_Results_Match_Winner'>{match.Winner}</span></h4>
-                                                <Link to={match.videoId} target='_blank'>
-                                            <button>Go to Video</button>
+                                            </h3>
+                                            <h4>Winner: <span className='Show_Results_Match_Winner'>{match.Winner}</span></h4>
+                                            <Link to={match.videoId} target='_blank'>
+                                                <button>Go to Video</button>
                                             </Link>
                                         </div>
                                     );
