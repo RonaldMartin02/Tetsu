@@ -8,28 +8,28 @@ import './scss/Landing.scss';
 const posts=[{
     title: "title",
     username: "username",
-    game: "game",
-    description: "description",
+    body: "description",
+    imgLink: "https://i.imgur.com/U7ypdLo.png",
     _id: "6"
 },
 {
     title: "title",
     username: "username",
-    game: "game",
-    description: "description",
+    body: "description",
+    imgLink: "https://i.imgur.com/U7ypdLo.png",
     _id: "2"
 }
 ]
 
 export default function Landing() {
-    console.log("Landing");return(
+    console.log("Landing");
+    return(
 
         <div className='post'>
            {
 
             posts.map((post, index) => (
-                <Post title={post.title} username={post.username} game={post.game} description={post.description} _id={post._id} key={index} />
-
+                <Post title={post.title} username={post.username} body={post.body} _id={post._id} imgLink={post.imgLink} key={index} />
             ))
             }
                 </div>
