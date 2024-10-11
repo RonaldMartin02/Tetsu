@@ -3,7 +3,7 @@ import { gql } from "@apollo/client";
 export const GET_ALL_POSTS = gql`
     query Posts {
   posts {
-    PostType
+    imgLink
     _id
     body
     postDate
@@ -18,7 +18,7 @@ query Post($postId: ID!) {
   post(postId: $postId) {
     body
     postDate
-    PostType
+    imgLink
     title
     username
     _id

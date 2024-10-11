@@ -76,12 +76,12 @@ const resolvers = {
                 console.error("Error creating post:", err);
             }
         },
-        editPost: async (parent, { _id, title, body, postType }) => {
+        editPost: async (parent, { _id, title, body, imgLink }) => {
             try {
                 return Post.findOneAndUpdate
                     (
                         { _id: _id },
-                        { title, body, postType },
+                        { title, body, imgLink },
                         { new: true }
                     );
             } catch (err) {

@@ -9,7 +9,7 @@ const postSchema = new Schema({
     type: String,
     required: true
   },
-  PostType: {
+  imgLink: {
     type: String,
     required: false
   },

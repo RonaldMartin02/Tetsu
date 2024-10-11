@@ -13,7 +13,7 @@ type Post {
     _id: ID
     title: String
     body: String
-    PostType: String
+    imgLink: String
     postDate: String
     username: String
 }
@@ -41,14 +41,14 @@ type Mutation {
 
     addPost( 
         title: String!
-        PostType: String!
+        imgLink: String!
         body: String!
         username: String!
     ): Post
     editPost(
         _id: ID!
         title: String
-        PostType: String
+        imgLink: String
         body: String
         
     ): Post

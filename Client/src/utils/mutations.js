@@ -25,9 +25,9 @@ mutation addUser($username: String!, $email: String!, $password: String!) {
 
 //POST MUTATIONS
 export const ADD_POST = gql`
-mutation AddPost($title: String!, $postType: String!, $body: String!, $username: String!) {
-  addPost(title: $title, PostType: $postType, body: $body, username: $username) {
-    PostType
+mutation AddPost($title: String!, $imgLink: String!, $body: String!, $username: String!) {
+  addPost(title: $title, imgLink: $imgLink, body: $body, username: $username) {
+    imgLink
     _id
     body
     postDate
@@ -37,9 +37,9 @@ mutation AddPost($title: String!, $postType: String!, $body: String!, $username:
 }
 `;
 export const EDIT_POST = gql`
-mutation EditPost($id: ID!, $body: String, $postType: String, $title: String) {
-  editPost(_id: $id, body: $body, PostType: $postType, title: $title) {
-    PostType
+mutation EditPost($id: ID!, $body: String, $imgLink: String, $title: String) {
+  editPost(_id: $id, body: $body, imgLink: $imgLink, title: $title) {
+    imgLink
     body
     postDate
     title
@@ -52,7 +52,7 @@ export const REMOVE_POST = gql`
 mutation RemovePost($postId: ID!) {
   removePost(postId: $postId) {
     _id
-    PostType
+    imgLink
     body
     postDate
     title

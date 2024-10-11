@@ -16,7 +16,7 @@ const posts=[{
     title: "title",
     username: "username",
     body: "description",
-    imgLink: "https://i.imgur.com/U7ypdLo.png",
+    // imgLink: "https://i.imgur.com/U7ypdLo.png",
     _id: "2"
 }
 ]
