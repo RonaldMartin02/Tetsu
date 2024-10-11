@@ -1,3 +1,7 @@
 .posts {
-  background-image: url(client/src/assets/img/carbon_fibre.PNG);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+    background-color: aqua;
 }

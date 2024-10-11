@@ -5,42 +5,34 @@ import './scss/Landing.scss';
 
 // import { GET_ALL_POSTS } from '../utils/queries.js';
 
+const posts=[{
+    title: "title",
+    username: "username",
+    game: "game",
+    description: "description",
+    _id: "6"
+},
+{
+    title: "title",
+    username: "username",
+    game: "game",
+    description: "description",
+    _id: "2"
+}
+]
+
 export default function Landing() {
     console.log("Landing");return(
 
         <div className='post'>
-<h1>Home</h1>
-<h1>Home</h1>
-<h1>Home</h1>
-<h1>Home</h1>
-<h1>Home</h1>
-<h1>Home</h1>
-<h1>Home</h1>
-<h1>Home</h1>
-<h1>Home</h1>
-<h1>Home</h1>
-<h1>Home</h1>
-<h1>Home</h1>
-<h1>Home</h1>
-<h1>Home</h1>
-<h1>Home</h1>
-<h1>Home</h1>
-<h1>Home</h1>
-<h1>Home</h1>
-<h1>Home</h1>
-<h1>Home</h1>
-<h1>Home</h1>
-<h1>Home</h1>
-<h1>Home</h1>
-<h1>Home</h1>
-<h1>Home</h1>
-<h1>Home</h1>
-<h1>Home</h1>
-<h1>Home</h1>
-<h1>Home</h1>
-<h1>Home</h1>
-<h1>Home</h1>
-    </div>
+           {
+
+            posts.map((post, index) => (
+                <Post title={post.title} username={post.username} game={post.game} description={post.description} _id={post._id} key={index} />
+
+            ))
+            }
+                </div>
 )
 }
 //         fetchPolicy: "no-cache"
