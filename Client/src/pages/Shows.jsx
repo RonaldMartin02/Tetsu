@@ -8,7 +8,7 @@ import './scss/Shows.scss';
 export default function Shows() {
     const ShowList = [
         {
-            pic: ChapBlack,
+            showBanner: ChapBlack,
             date: "10/10/2021",
             Time: "7:00 PM",
             Location: "25 Center St Windsor, CT",
@@ -83,7 +83,7 @@ export default function Shows() {
             }
         },
         {
-            pic: TheRealFolkBlues,
+            showBanner: TheRealFolkBlues,
             date: "04/25/2024",
             Time: "7:00 PM",
             Location: "255 West St, Bristol CT",
@@ -172,7 +172,7 @@ export default function Shows() {
             {ShowList.map((show) => (
                 <div className='Show'>
                     <div className='Show_Header'>
-                        <img className='Show_Header_Img' src={show.pic} alt="Temp" />
+                        <img className='Show_Header_Img' src={show.showBanner} alt="Temp" />
                         <h2 className='Show_Header_Name'>{show.Name}</h2>
                     </div>
                     <div className='Show_Info'>
