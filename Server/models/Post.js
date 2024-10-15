@@ -22,6 +22,6 @@ const postSchema = new Schema({
     required: true
   },
 });
-const Post = model('Build', postSchema);
+const Post = model('Post', postSchema);
 
 module.exports = Post;

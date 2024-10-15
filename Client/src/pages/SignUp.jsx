@@ -1,18 +1,17 @@
-import { useState } from 'react';
+
 import { Link } from 'react-router-dom';
-import { useMutation } from '@apollo/client';
 // import { ADD_USER } from '../utils/mutations';
 // import './scss/Signup.scss';
 import Auth from '../utils/auth';
 import ErrorModal from '../components/ErrorModal';
 const Signup = () => {
-  
-  const [formState, setFormState] = useState({ 
+
+  const [formState, setFormState] = useState({
     username: '',
     email: '',
     password: ''
-   })
-   const validatePassword = (password) => {
+  })
+  const validatePassword = (password) => {
     const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
     return passwordRegex.test(password);
   }
@@ -48,7 +47,7 @@ const Signup = () => {
       setShowModal(true);
       return; // Prevent form submission if email is invalid
     }
-    
+
     try {
       const { data } = await addUser({ variables: { ...formState } })
       console.log(data.ADD_USER)
@@ -56,19 +55,19 @@ const Signup = () => {
     } catch (e) {
       console.error(e)
       setErr(e.message); // Set error message from API response
-      setShowModal(true); 
+      setShowModal(true);
     }
   }
   return (
     <div className="signup">
       {showModal && err && (
-        <ErrorModal errorMessage={err} onClose={closeModal} errorType={errType}/>
+        <ErrorModal errorMessage={err} onClose={closeModal} errorType={errType} />
       )}
       <div className="signup_card">
         <h4 className="signup_card_header">Sign Up</h4>
         <div className="signup_card_body">
           {data ? (
-              console.log(4),
+            console.log(4),
             <p>
               Success! You may now head{' '}
               <Link to="/">back to the homepage.</Link>

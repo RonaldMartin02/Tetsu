@@ -11,6 +11,6 @@ const showSchema = new Schema({
     },
 });
 
-const Show = model('Build', postSchema);
+const Show = model('Show', showSchema);
 
 module.exports = Show;

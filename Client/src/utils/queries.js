@@ -1,14 +1,14 @@
 import { gql } from "@apollo/client";
 
 export const GET_ALL_POSTS = gql`
-    query Posts {
+  query Posts {
   posts {
-    imgLink
-    _id
     body
+    imgLink
     postDate
     title
     username
+    _id
   }
 }
     `;
