@@ -11,9 +11,11 @@ import EditPost from './pages/EditPost'
 import LogIn from './pages/LogIn'
 import SignUp from './pages/SignUp'
 import Roster from './pages/Roster'
-import Shop from './pages/Shop.jsx'
 import Cart from './pages/Cart'
 import Shows from './pages/Shows'
+import CreateShow from './pages/CreateShow'
+import EditShow from './pages/EditShow'
+import Shop from './pages/shop'
 
 const router = createBrowserRouter(
   [
