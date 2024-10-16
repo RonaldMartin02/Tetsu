@@ -25,6 +25,26 @@ type Item {
     category: String
     quantity: Int    
 }
+type Show{
+    _id: ID
+    showDate: Date
+    showTime: String
+    showLocation: String
+    showName: String
+    showPrice: Float
+    results: [Match]
+}
+type Match{
+    _id: ID
+    matchType: String
+    wrestlers: [Wrestler]
+    matchWinner: String
+    videoId: String
+}
+type Wrestler{
+    _id: ID
+    wrestlerName: String
+}
 
 type Query {
     posts: [Post]
@@ -33,6 +53,7 @@ type Query {
     user(_id: ID!): User
     items: [Item]
     item(itemId: ID!): Item
+
 }
 type Mutation {
     login(email: String!, password: String!): Auth

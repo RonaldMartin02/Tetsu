@@ -1,6 +1,6 @@
 const { signToken, AuthenticationError } = require('../utils/auth');
 
-const { User, Item, Post } = require('../models/index');
+const { User, Item, Post,Show } = require('../models/index');
 
 const resolvers = {
     Query: {
@@ -41,11 +41,25 @@ const resolvers = {
         },
         item: async (parent, { itemId }) => {
             try {
-            return Item.findOne({ _id: itemId })
-        } catch (err) {
-            console.error("Error fetching item:", err);
-        }
-    },
+                return Item.findOne({ _id: itemId })
+            } catch (err) {
+                console.error("Error fetching item:", err);
+            }
+        },
+        shows: async () => {
+            try {
+                return Show.find();
+            } catch (err) {
+                console.error("Error fetching shows:", err);
+            }
+        },
+        show: async (parent, { showId }) => {
+            try {
+                return Show.findOne({ _id: showId });
+            } catch (err) {
+                console.error("Error fetching show:", err);
+            }
+        },
     },
     Mutation: {
         login: async (parent, { email, password }) => {
@@ -103,7 +117,8 @@ const resolvers = {
             }
         },
         removeItem: async (parent, { itemId }) => {
-            try { return Item.findOneAndDelete({ _id: itemId});
+            try {
+                return Item.findOneAndDelete({ _id: itemId });
             }
             catch (err) {
                 console.error("Error deleting item:", err);
@@ -118,9 +133,34 @@ const resolvers = {
                 );
             } catch (err) {
                 console.error("Error updating item:", err);
-            }    
+            }
+        },
+        addShow: async (parent, args) => {
+            try {
+                return Show.create(args);
+            } catch (err) {
+                console.error("Error creating show:", err);
+            }
+        },
+        removeShow: async (parent, { showId }) => {
+            try {
+                return Show.findOneAndDelete({ _id: showId });
+            } catch (err) {
+                console.error("Error deleting show:", err);
+            }
+        },
+        editShow: async (parent, { _id, title, description, imgLink }) => {
+            try {
+                return Show.findOneAndUpdate(
+                    { _id: _id },
+                    { title, description, imgLink },
+                    { new: true }
+                );
+            } catch (err) {
+                console.error("Error updating show:", err);
+            }
         }
-}
+    }
 };
 
 module.exports = resolvers;

@@ -9,9 +9,9 @@ export default function Shows() {
     const ShowList = [
         {
             showBanner: ChapBlack,
-            date: "10/10/2021",
-            Time: "7:00 PM",
-            Location: "25 Center St Windsor, CT",
+            showDate: "10/10/2021",
+            showTime: "7:00 PM",
+            showLocation: "25 Center St Windsor, CT",
             Name: "Chapter Black",
             Results: {
                 Match: {
@@ -84,9 +84,9 @@ export default function Shows() {
         },
         {
             showBanner: TheRealFolkBlues,
-            date: "04/25/2024",
-            Time: "7:00 PM",
-            Location: "255 West St, Bristol CT",
+            showDate: "04/25/2024",
+            showTime: "7:00 PM",
+            showLocation: "255 West St, Bristol CT",
             Name: "The Real Folk Blues",
             Results: {
                 Match: {
@@ -177,11 +177,11 @@ export default function Shows() {
                     </div>
                     <div className='Show_Info'>
                         <div className='Show_Info_Left'>
-                            <h1 className='Show_Info_Left_Date'>Date:{show.date}</h1>
-                            <h2 className='Show_Info_Left_Time'>Time: {show.Time}</h2>
+                            <h1 className='Show_Info_Left_Date'>Date:{show.showDate}</h1>
+                            <h2 className='Show_Info_Left_Time'>showTime: {show.showTime}</h2>
                         </div>
                         <div className='Show_Info_Right'>
-                            <h1 className='Show_Info_Right_Location'>Location: {show.Location}</h1>
+                            <h1 className='Show_Info_Right_Location'>showLocation: {show.showLocation}</h1>
                         </div>
                     </div>
                     <div className='Show_Results'>
