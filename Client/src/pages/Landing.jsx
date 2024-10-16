@@ -1,5 +1,5 @@
 import { useQuery } from '@apollo/client';
-import Post from '../components/Post';
+import Post from '../components/Post.jsx';
 import './scss/Landing.scss';
 import { Link } from 'react-router-dom';
 import { GET_ALL_POSTS } from '../utils/queries.js';
