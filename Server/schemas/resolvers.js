@@ -159,7 +159,57 @@ const resolvers = {
             } catch (err) {
                 console.error("Error updating show:", err);
             }
-        }
+        },
+        addMatch: async (parent, args) => {
+            try {
+                return Match.create(args);
+            } catch (err) {
+                console.error("Error creating match:", err);
+            }
+        },
+        removeMatch: async (parent, { matchId }) => {
+            try {
+                return Match.findOneAndDelete({ _id: matchId });
+            } catch (err) {
+                console.error("Error deleting match:", err);
+            }
+        },
+        editMatch: async (parent, { _id, matchType, wrestlers, matchWinner, videoId }) => {
+            try {
+                return Match.findOneAndUpdate(
+                    { _id: _id },
+                    { matchType, wrestlers, matchWinner, videoId },
+                    { new: true }
+                );
+            } catch (err) {
+                console.error("Error updating match:", err);
+            }
+        },
+        addWrestler: async (parent, args) => {
+            try {
+                return Wrestler.create(args);
+            } catch (err) {
+                console.error("Error creating wrestler:", err);
+            }
+        },
+        removeWrestler: async (parent, { wrestlerId }) => {
+            try {
+                return Wrestler.findOneAndDelete({ _id: wrestlerId });
+            } catch (err) {
+                console.error("Error deleting wrestler:", err);
+            }
+        },
+        editWrestler: async (parent, { _id, wrestlerName }) => {
+            try {
+                return Wrestler.findOneAndUpdate(
+                    { _id: _id },
+                    { wrestlerName },
+                    { new: true }
+                );
+            } catch (err) {
+                console.error("Error updating wrestler:", err);
+            }
+        }    
     }
 };
 
