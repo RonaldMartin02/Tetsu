@@ -5,7 +5,7 @@ import './index.scss'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Landing from './pages/Landing'
 import About from './pages/About'
-import Post from './pages/Post'
+import Post from './pages/post'
 import CreatePost from './pages/CreatePost'
 import EditPost from './pages/EditPost'
 import LogIn from './pages/LogIn'

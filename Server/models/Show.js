@@ -27,7 +27,7 @@ const showSchema = new Schema({
         required: true
     },
     showDate: {
-        type: Date,
+        type: String,
         required: true
     },
     showTime: {
