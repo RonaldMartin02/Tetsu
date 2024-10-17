@@ -5,7 +5,7 @@ import './index.scss'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Landing from './pages/Landing'
 import About from './pages/About'
-// import Post from './pages/Post'
+import Post from './pages/Post'
 import CreatePost from './pages/CreatePost'
 import EditPost from './pages/EditPost'
 import LogIn from './pages/LogIn'
@@ -21,7 +21,7 @@ const router = createBrowserRouter(
   [
     { path: '/',
     element: <App />,
-    // errorElement: <ErrorPage />,
+    errorElement: <ErrorPage />,
     children: [
       {
         index: true,
@@ -31,10 +31,10 @@ const router = createBrowserRouter(
         path: '/AboutUs',
         element: <About />,
       },
-      // {
-      //   path: '/Post/:postId',
-      //   element: <Post />,
-      // },
+      {
+        path: '/Post/:postId',
+        element: <Post />,
+      },
       {
         path: '/Post/Create',
         element: <CreatePost />,
