@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import Logo from '../assets/Img/Tetsu_Pro_Clear.png';
+// import Logo from '../assets/Img/Tetsu_Pro_Clear.png';
 import './scss/LoggedOutHeader.scss';
 export default function Header() {
 
@@ -45,7 +45,7 @@ export default function Header() {
         <div >
 
           <Link to='/'>
-            <img src={Logo} alt='logo' className='Header_Logo' />
+            {/* <img src={Logo} alt='logo' className='Header_Logo' /> */}
           </Link>
         </div>
         <div className='Header_Right'>
