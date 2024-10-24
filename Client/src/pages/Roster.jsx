@@ -26,7 +26,7 @@ export default function Roster() {
             name: 'Xander Litt',
         },
         {
-            name: 'TOS YoungBoy',
+            name: 'The YoungBoy',
         },
     ];
 
