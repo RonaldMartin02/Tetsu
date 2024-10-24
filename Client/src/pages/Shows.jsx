@@ -1,14 +1,14 @@
 
 import { Link, useNavigate } from 'react-router-dom';
 
-import ChapBlack from '../assets/Img/Chapter_Black.jpg';
-import TheRealFolkBlues from '../assets/Img/The_Real_Folk_Blues_Words.jpg';
+// import ChapBlack from '../assets/Img/Chapter_Black.jpg';
+// import TheRealFolkBlues from '../assets/Img/The_Real_Folk_Blues_Words.jpg';
 import './scss/Shows.scss';
 
 export default function Shows() {
     const ShowList = [
         {
-            showBanner: ChapBlack,
+            showBanner: "https://i.imgur.com/1Q6Q6Zz.jpg",
             showDate: "10/10/2021",
             showTime: "7:00 PM",
             showLocation: "25 Center St Windsor, CT",
@@ -83,7 +83,7 @@ export default function Shows() {
             }
         },
         {
-            showBanner: TheRealFolkBlues,
+            showBanner: "https://i.imgur.com/1Q6Q6Zz.jpg",
             showDate: "04/25/2024",
             showTime: "7:00 PM",
             showLocation: "255 West St, Bristol CT",
