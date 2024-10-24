@@ -25,6 +25,9 @@ export default function Roster() {
         {
             name: 'Xander Litt',
         },
+        {
+            name: 'The YoungBoy',
+        },
     ];
 
     const groupedWrestlers = roster.reduce((acc, wrestler, index) => {

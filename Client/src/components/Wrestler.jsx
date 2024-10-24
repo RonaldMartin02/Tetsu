@@ -1,11 +1,12 @@
-import Ichiban from '../assets/Img/Ichi_Hex.png';
-import Jermaine from '../assets/Img/Jermaine_Hex.png';
-import Jorge from '../assets/Img/Jorge_Hex.png';
-import Sammy from '../assets/Img/Sammy_Hex.png';
-import Skylar from '../assets/Img/Skylar_Hex.png';
-import Troy from '../assets/Img/Troy_Hex.png';
-import Xander from '../assets/Img/Xander_Hex.png';
-import Patrick from '../assets/Img/Patrick.png';
+import Ichiban from '../assets/Img/IchibanHex.png';
+import Jermaine from '../assets/Img/JermaineHex.png';
+import Jorge from '../assets/Img/JorgeHex.png';
+import Sammy from '../assets/Img/SammyHex.png';
+import Skylar from '../assets/Img/SkylarHex.png';
+import Troy from '../assets/Img/TroyHex.png';
+import Xander from '../assets/Img/XanderLittHex.png';
+import Patrick from '../assets/Img/DonDadaHex.png';
+import YoungBoy from '../assets/Img/YoungBoyHex.png';
 
 export default function Wrestlers(props) {
     console.log(props.name)
@@ -57,6 +58,20 @@ export default function Wrestlers(props) {
     <div className='Wrestler'>
         <div className={props.name}>
             <img src={Xander}  alt="" />
+        </div>
+    </div>)}
+    else if (props.name === 'Patrick Saint') {
+        return (
+    <div className='Wrestler'>
+        <div className={props.name}>
+            <img src={Patrick}  alt="" />
+        </div>
+    </div>)}
+    else if (props.name === 'The YoungBoy') {
+        return (
+    <div className='Wrestler'>
+        <div className={props.name}>
+            <img src={YoungBoy}  alt="" />
         </div>
     </div>)}
     else if (props.name === 'Patrick Saint') {
