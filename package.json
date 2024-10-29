@@ -13,6 +13,7 @@
   "author": "Ronald Martin",
   "license": "ISC",
   "dependencies": {
+    "mongodb": "^6.10.0"
   },
   "devDependencies": {
     "concurrently": "^8.2.0"
