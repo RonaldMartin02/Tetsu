@@ -2,7 +2,7 @@
   "name": "tetsu_pro",
   "version": "1.0.0",
   "description": "Site For Tetsu Pro Wrestling",
-  "main": "index.js",
+  "main": "Server/server.js",
   "scripts": {
     "start": "node Server/server.js",
     "develop": "concurrently \"cd Server && npm run watch\" \"cd Client && npm run dev\"",
