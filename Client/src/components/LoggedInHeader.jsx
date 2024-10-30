@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import Auth from '../utils/auth';
 import { Link, useLocation,useNavigate } from 'react-router-dom';
+import Logo from '../assets/Img/Tetsu_Pro_Clear.png';
 import './scss/LoggedInHeader.scss';
 
 export default function Header() {
@@ -36,15 +37,15 @@ export default function Header() {
 
   const currentPage = useLocation().pathname;
 
-  if (currentPage === "/Build/Create") {
+  if (currentPage === "/Post/Create") {
     if (!matches) {
       console.log("rendering create build header")
       return (
         <header className='Header'>
           <div className='Header_Search' />
           <Link to='/'>
-           <h1 className='Header_GizmoGaming'>Gizmo Gaming</h1>
-                </Link>
+            <img src={Logo} alt='logo' className='Header_Logo' />
+          </Link>
           <div className='Header_Btns'>
             <Link to ='/'>
             <button>Home</button>
@@ -65,8 +66,8 @@ export default function Header() {
           <div className='Header_Search' />
           <div className='Header_Nav' >
           <Link to='/'>
-           <h1 className='Header_GizmoGaming'>Gizmo Gaming</h1>
-                </Link>
+            <img src={Logo} alt='logo' className='Header_Logo' />
+          </Link>
           <button onClick={toggleMenu} className="menu-button">
           &#9776; {/* Hamburger Icon */}
         </button>
@@ -81,8 +82,8 @@ export default function Header() {
             <Link to ='/aboutus'>
             <button>About Us</button>
             </Link>
-            {currentPage !== '/Build/Create' && (
-              <Link to ='/Build/Create'>
+            {currentPage !== '/Post/Create' && (
+              <Link to ='/Post/Create'>
                 <button>New Post</button>
               </Link>
             )}

@@ -1,43 +1,41 @@
-
+import React, { useState, useEffect } from 'react';
 import Wrestler from '../components/Wrestler';
 import './scss/Roster.scss';
 
 export default function Roster() {
+    const [isSmallScreen, setIsSmallScreen] = useState(false);
+
     const roster = [
-        {
-            name: 'Ichiban',
-        },
-        {
-            name: 'Jermaine Marbury',
-        },
-        {
-            name: 'Jorge Santi',
-        },
-        {
-            name: 'Sammy Diaz',
-        },
-        {
-            name: 'Skylar',
-        },
-        {
-            name: 'Troy Stevens',
-        },
-        {
-            name: 'Xander Litt',
-        },
-        {
-            name: 'The YoungBoy',
-        },
+        { name: 'Ichiban' },
+        { name: 'Jermaine Marbury' },
+        { name: 'Jorge Santi' },
+        { name: 'Sammy Diaz' },
+        { name: 'Skylar' },
+        { name: 'Troy Stevens' },
+        { name: 'Xander Litt' },
+        { name: 'The YoungBoy' },
     ];
 
-    const groupedWrestlers = roster.reduce((acc, wrestler, index) => {
-        if (index % 2 === 0) {
-            acc.push([wrestler]);
-        } else {
-            acc[acc.length - 1].push(wrestler);
-        }
-        return acc;
+    useEffect(() => {
+        const handleResize = () => {
+            setIsSmallScreen(window.innerWidth < 768); // Adjust threshold as needed
+        };
+
+        handleResize(); // Initial check
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
     }, []);
+
+    const groupedWrestlers = isSmallScreen
+        ? roster // Show all wrestlers individually on small screens
+        : roster.reduce((acc, wrestler, index) => {
+            if (index % 2 === 0) {
+                acc.push([wrestler]);
+            } else {
+                acc[acc.length - 1].push(wrestler);
+            }
+            return acc;
+        }, []);
 
     return (
         <div className='Roster'>
@@ -51,10 +49,10 @@ export default function Roster() {
                     <h3 className='Roster_Champ_Right_Name'>Patrick Saint</h3>
                 </div>
             </div>
-            <div>
+            <div className='Grouped'>
                 {groupedWrestlers.map((group, groupIndex) => (
                     <div className='Roster_Group' key={groupIndex}>
-                        {group.map((wrestler) => (
+                        {(Array.isArray(group) ? group : [group]).map((wrestler) => (
                             <div className='Roster_Wrestlers' key={wrestler.name}>
                                 <div className='Roster_Wrestlers_Left'>
                                     <Wrestler name={wrestler.name} />
