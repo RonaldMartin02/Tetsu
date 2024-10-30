@@ -89,3 +89,25 @@
         
     }
 }
+
+@media (max-width: 768px) {
+    .Roster {
+    flex-direction: column;
+  }
+    // .Roster_Champ{
+    //     flex-direction: column;
+    // }
+    .Roster_Wrestlers{
+        flex-direction: column;
+    }
+    .Grouped{
+        flex-direction: column;
+    }
+    .Roster_Group{
+        flex-direction: column;
+
+    }
+    .Roster_Wrestlers{
+        flex-direction: row;
+    }
+}

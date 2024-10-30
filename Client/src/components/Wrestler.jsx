@@ -1,12 +1,12 @@
-import Ichiban from '../assets/Img/IchibanHex.png';
-import Jermaine from '../assets/Img/JermaineHex.png';
-import Jorge from '../assets/Img/JorgeHex.png';
-import Sammy from '../assets/Img/SammyHex.png';
-import Skylar from '../assets/Img/SkylarHex.png';
-import Troy from '../assets/Img/TroyHex.png';
-import Xander from '../assets/Img/XanderLittHex.png';
-import Patrick from '../assets/Img/DonDadaHex.png';
-import YoungBoy from '../assets/Img/YoungBoyHex.png';
+import Ichiban from '../assets/Img/IchibanGreyHex.png';
+import Jermaine from '../assets/Img/JermaineGreyHex.png';
+import Jorge from '../assets/Img/JorgeGreyHex.png';
+import Sammy from '../assets/Img/SammyGreyHex.png';
+import Skylar from '../assets/Img/SkylarGreyHex.png';
+import Troy from '../assets/Img/TroyGreyHex.png';
+import Xander from '../assets/Img/XanderLittGreyHex.png';
+import Patrick from '../assets/Img/DonDadaGoldHex.png';
+import YoungBoy from '../assets/Img/YoungBoyGreyHex.png';
 
 export default function Wrestlers(props) {
     console.log(props.name)
