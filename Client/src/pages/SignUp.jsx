@@ -1,7 +1,7 @@
 
 import { Link } from 'react-router-dom';
-// import { ADD_USER } from '../utils/mutations';
-// import './scss/Signup.scss';
+import { ADD_USER } from '../utils/mutations';
+import './scss/Signup.scss';
 import Auth from '../utils/auth';
 import ErrorModal from '../components/ErrorModal';
 const Signup = () => {
