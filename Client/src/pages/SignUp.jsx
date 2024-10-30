@@ -4,6 +4,9 @@ import { ADD_USER } from '../utils/mutations';
 import './scss/Signup.scss';
 import Auth from '../utils/auth';
 import ErrorModal from '../components/ErrorModal';
+import { useMutation } from '@apollo/client';
+import { useState } from 'react';
+
 const Signup = () => {
 
   const [formState, setFormState] = useState({
