@@ -49,7 +49,7 @@ export default function Roster() {
                     <h3 className='Roster_Champ_Right_Name'>Patrick Saint</h3>
                 </div>
             </div>
-            <div className='Grouped'>
+            <div className='Roster_Wrestlers_div'>
                 {groupedWrestlers.map((group, groupIndex) => (
                     <div className='Roster_Group' key={groupIndex}>
                         {(Array.isArray(group) ? group : [group]).map((wrestler) => (
