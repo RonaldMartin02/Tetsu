@@ -4,7 +4,7 @@ import Auth from '../utils/auth';
 import { useParams } from 'react-router-dom';
 import { useQuery, useMutation } from '@apollo/client';
 
-import './scss/post.scss';
+import './scss/Post.scss';
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 // import Comment from '../components/Comment';
