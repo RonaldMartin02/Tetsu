@@ -12,37 +12,37 @@ export default function EditPost() {
     const navigate = useNavigate();
     console.log("EditPost");
     const { postId } = useParams();
-    const { loading, data } = useQuery(GET_BUILD, {
-        variables: { buildId: buildId },
+    const { loading, data } = useQuery(GET_POST, {
+        variables: { postId: postId },
     });
     // console.log(data);
     const [postText, setPostText] = useState('');
     const [postTitle, setPostTitle] = useState('');
-    const [postGame, setGame] = useState('');
+    const [postImgLink, setImgLink] = useState('');
 
     
-    // const [buildGenre, setGenre] = useState('');
+    // const [postGenre, setGenre] = useState('');
     const [characterCount, setCharacterCount] = useState(0);
-    const [editBuild, { error }] = useMutation(EDIT_POST,
+    const [editPost, { error }] = useMutation(EDIT_POST,
         {
             refetchQueries:
                 [
                     GET_POST,
-                    'getBuild'
+                    'getPost'
                 ]
         });
-    // const build = data?.build || {};
+    // const post = data?.post || {};
     const handleFormSubmit = async (event) => {
         event.preventDefault();
-        console.log(postTitle, postText, postGame, Auth.getProfile().data.username);
+        console.log(postTitle, postText, postImgLink, Auth.getProfile().data.username);
         try {
             const { data } = await editPOST({
                 variables: {
                     title: postTitle,
                     body: postText,
-                    game: postGame,
+                    imgLink: postImgLink,
                     username: Auth.getProfile().data.username,
-                    id: buildId
+                    id: postId
                 },
             });
             console.log(data);
@@ -58,9 +58,9 @@ export default function EditPost() {
 
     // const handleEdit = async (event) => {
     //     event.preventDefault();
-    //     setPostText(build.body);
-    //     setPostTitle(build.title);
-    //     setGame(build.game);
+    //     setPostText(post.body);
+    //     setPostTitle(post.title);
+    //     setImgLink(post.imgLink);
 
     // }
 
@@ -72,8 +72,8 @@ export default function EditPost() {
         } else if (name === 'postText' && value.length <= 580) {
             setPostText(value);
             setCharacterCount(value.length);
-        } else if (name === 'game') {
-            setGame(value);
+        } else if (name === 'imgLink') {
+            setImgLink(value);
         }
         // else if (name === 'genre') {
         //     setGenre(value);
@@ -82,36 +82,32 @@ export default function EditPost() {
     // handleEdit();
     return (
         <div className='Submit'>
-            <h1>Share your Build!</h1>
+            <h1>Share your Post!</h1>
 
             {Auth.loggedIn() ? (
                 <form className='Submit_form'
                     onSubmit={handleFormSubmit}
                     >
                     <input
-                        placeholder={data?.build.title}
+                        placeholder={data?.post.title}
                         value={postTitle}
                         className='Submit_form_title'
                         onChange={handleChange}
                         name='postTitle' />
 
-                    <select
-                        name='game'
-                        id='game'
-                        className='Submit_form_game'
-                        onChange={handleChange} >
-                        <option value="" >Select a game</option>
-                        <option value='World of Warcraft'>World of Warcraft</option>
-                        <option value='League of Legends'>League of Legends</option>
-                        <option value='Halo'>Halo</option>
-                        <option value='Overwatch'>Overwatch</option>
-                    </select>
+                    <input
+                        placeholder='Image Link'
+                        value={postImgLink}
+                        className='Submit_form_Img_Link'
+                        onChange={handleChange}
+                        name='postImgLink'
+                         />
 
                     <textarea
                         id="postText"
                         className='Submit_form_text'
                         name="postText"
-                        placeholder="Here is a new build..."
+                        placeholder="Here is a new post..."
                         value={postText}
                         rows="4"
                         onChange={handleChange}
@@ -124,11 +120,11 @@ export default function EditPost() {
                             {error && <span className='Submit_form_info_text-error'>Something went wrong...</span>}
                         </p>
                     </div>
-                    <button className='Submit_form_btn' type='submit' >Add Build</button>
+                    <button className='Submit_form_btn' type='submit' >Add Post</button>
                 </form>
             ) : (
                 <p>
-                    You need to be logged in to share your build. Please{' '}
+                    You need to be logged in to share your post. Please{' '}
                     <Link to='/login'>Login</Link> or <Link to='/signup'>Sign-up</Link>.
                 </p>
             )}

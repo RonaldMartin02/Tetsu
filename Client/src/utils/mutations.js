@@ -60,16 +60,3 @@ mutation RemovePost($postId: ID!) {
   }
 }
 `;
-
-//ITEM MUTATIONS
-export const ADD_COMMENT = gql`
-mutation AddItem($name: String!, $price: Float!, $description: String!, $category: String!, $quantity: Int!) {
-  addItem(name: $name, price: $price, description: $description, category: $category, quantity: $quantity) {
-    category
-    description
-    price
-    quantity
-    name
-  }
-}
-`;

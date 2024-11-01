@@ -11,10 +11,9 @@ export default function CreatePost() {
     const navigate = useNavigate();
     const [postText, setPostText] = useState('');
     const [postTitle, setPostTitle] = useState('');
-    const [postGame, setGame] = useState('');
-    // const [buildGenre, setGenre] = useState('');
+    const [postImgLink, setPostImgLink] = useState('');
     const [characterCount, setCharacterCount] = useState(0);
-    const [addBuild, { error }] = useMutation(ADD_POST,
+    const [addPost, { error }] = useMutation(ADD_POST,
         {
             refetchQueries:
                 [
@@ -25,13 +24,13 @@ export default function CreatePost() {
 
     const handleFormSubmit = async (event) => {
         event.preventDefault();
-        console.log(postTitle, postText, postGame, Auth.getProfile().data.username);
+        console.log(postTitle, postText, postImgLink, Auth.getProfile().data.username);
         try {
-            const { data } = await addBuild({
+            const { data } = await addPost({
                 variables: {
                     title: postTitle,
                     body: postText,
-                    game: postGame,
+                    imgLink: postImgLink,
                     // genre: genre,
                     username: Auth.getProfile().data.username,
                 },
@@ -39,7 +38,6 @@ export default function CreatePost() {
             console.log(data);
 
             setPostText('');
-        //    navigate('/')
 
 
         } catch (err) {
@@ -55,8 +53,8 @@ export default function CreatePost() {
         } else if (name === 'postText' && value.length <= 280) {
             setPostText(value);
             setCharacterCount(value.length);
-        } else if (name === 'game') {
-            setGame(value);
+        } else if (name === 'postImgLink') {
+            setPostImgLink(value);
         }
         // else if (name === 'genre') {
         //     setGenre(value);
@@ -77,35 +75,18 @@ export default function CreatePost() {
                         onChange={handleChange}
                         name='postTitle' />
 
-                    <select
-                        name='game'
-                        id='game'
-                        className='Submit_form_game'
-                        onChange={handleChange} >
-                        <option value="">Select a game</option >
-                        <option value='World of Warcraft'>World of Warcraft</option>
-                        <option value='League of Legends'>League of Legends</option>
-                        <option value='Halo'>Halo</option>
-                        <option value='Overwatch'>Overwatch</option>
-                    </select>
-
-                    {/* <select
-                            name='genre'
-                            id='genre'
-                            className='Submit_form_genre'
-                            onChange={handleChange} >
-                            <option value="" disabled hidden>Select a genre</option>
-                            <option value='RPG'>RPG</option>
-                            <option value='MOBA'>MOBA</option>
-                            <option value='FPS'>FPS</option>
-                            <option value='RTS'>RTS</option>
-                        </select> */}
-
+                    <input
+                        placeholder='Image Link'
+                        value={postImgLink}
+                        className='Submit_form_Img_Link'
+                        onChange={handleChange}
+                        name='postImgLink'
+                         />
                     <textarea
                         id="postText"
                         className='Submit_form_text'
                         name="postText"
-                        placeholder="Here is a new build..."
+                        placeholder="This is where you Write stufffffffff"
                         rows="4"
                         onChange={handleChange}
                         required />
