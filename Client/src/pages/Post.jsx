@@ -105,11 +105,10 @@ export default function Post() {
         <div className='Post_Div'>
             <h1 className='Post_Div_Title'>
                 {post.title}
-                <span className='Post_Div_User'>Posted by: {post.username} {/*at {post.postDate}*/}</span>
             </h1>
-            <img className='Post_Div_ImgLink' src={post.imgLink}/> 
             <div className='Post_Div_Body_Container'>
             <p className='Post_Div_Body_text'>{post.body}</p>
+            <img className='Post_Div_ImgLink' src={post.imgLink}/> 
             </div>
             {renderButtons()}
         </div>

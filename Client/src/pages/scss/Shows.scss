@@ -1,11 +1,12 @@
-.Shows{
+.Shows {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     margin-top: 20px;
     margin-bottom: 20px;
 }
-.Show{
+
+.Show {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -14,72 +15,217 @@
     background-color: #2d2d2d;
     border-radius: 10px;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
-    &_Header{
+
+    &_Header {
         background-color: #232323;
         border-radius: 10px;
         box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
-        &_img{
+        padding: 10px;
+
+        &_img {
             width: 100%;
             height: auto;
             border-radius: 10px;
         }
-        &_Name{
+
+        &_Name {
             font-size: 1.5rem;
             margin-top: 10px;
             margin-bottom: 10px;
         }
     }
-    &_Info{
+
+    &_Info {
+        padding: 10px;
+        margin: 10px;
         background-color: #232323;
         border-radius: 10px;
         box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
         font-size: 1.5rem;
-        &_Left{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 80%;
+        &_Left {
             font-size: 1.5rem;
-            &_Date{
+            align-content: center;
+
+            &_Doors {
                 font-size: 1.5rem;
+                text-align: left;
             }
-            &_Time{
+
+            &_Time {
                 font-size: 1.5rem;
+                text-align: left;
             }
         }
-        &_Right{
-            font-size: 1.5rem;
-            &_Location{
+
+        &_Right {
+            &_Date {
                 font-size: 1.5rem;
+                text-align: right;
+            }
+
+            &_Location {
+                font-size: 1.5rem;
+                text-align: right;
             }
         }
     }
-    &_Results{
+
+    &_Results {
         background-color: #232323;
         border-radius: 30px;
         padding: 10px;
         box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
         font-size: 1.5rem;
-       &_Match{
+
+        &_Match {
             font-size: 1.5rem;
-            &_Type{
+            background-color: #202020;
+            border-radius: 10px;
+            margin: 10px;
+            padding: 10px;
+            &_Type {
                 font-size: 1.5rem;
             }
-            &_Wrestlers{
+
+            &_Wrestlers {
                 font-size: 1.5rem;
-                &_1{
+
+                &_1 {
                     font-size: 1.5rem;
                 }
-                &_2{
+
+                &_2 {
                     font-size: 1.5rem;
                 }
-                &_3{
+
+                &_3 {
                     font-size: 1.5rem;
                 }
-                &_4{
+
+                &_4 {
                     font-size: 1.5rem;
                 }
             }
-            &_Winner{
+
+            &_Winner {
                 font-size: 1.5rem;
                 color: yellow;
             }
-       }
+            &_Video {
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        .Show {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 10px;
+            padding: 10px;
+            background-color: #2d2d2d;
+            border-radius: 10px;
+            box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+
+            &_Header {
+                background-color: #232323;
+                border-radius: 10px;
+                box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+                padding: 10px;
+
+                &_img {
+                    width: 100%;
+                    height: auto;
+                    border-radius: 10px;
+                }
+
+                &_Name {
+                    font-size: 1.5rem;
+                    margin-top: 10px;
+                    margin-bottom: 10px;
+                }
+            }
+
+            &_Info {
+                padding: 10px;
+                margin: 10px;
+                background-color: #232323;
+                border-radius: 10px;
+                box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+                font-size: 1.5rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                text-align: center;
+                &_Left {
+                    font-size: 1.5rem;
+                    align-content: center;
+
+                    &_Doors {
+                        font-size: 1.5rem;
+                    }
+
+                    &_Time {
+                        font-size: 1.5rem;
+                    }
+                }
+
+                &_Right {
+                    &_Date {
+                        font-size: 1.5rem;
+                    }
+
+                    &_Location {
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+
+            &_Results {
+                background-color: #232323;
+                border-radius: 30px;
+                padding: 10px;
+                box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+                font-size: 1.5rem;
+
+                &_Match {
+                    font-size: 1.5rem;
+
+                    &_Type {
+                        font-size: 1.5rem;
+                    }
+
+                    &_Wrestlers {
+                        font-size: 1.5rem;
+
+                        &_1 {
+                            font-size: 1.5rem;
+                        }
+
+                        &_2 {
+                            font-size: 1.5rem;
+                        }
+
+                        &_3 {
+                            font-size: 1.5rem;
+                        }
+
+                        &_4 {
+                            font-size: 1.5rem;
+                        }
+                    }
+
+                    &_Winner {
+                        font-size: 1.5rem;
+                        color: yellow;
+                    }
+                }
+            }
+        }
     }
 }

@@ -5,8 +5,10 @@ $primary-color: #507DBC;
 $secondary-color: #A1C6EA;
 $tertiary-color: #BBD1EA;
 $font-size: 1.2em;
-  
-  .Footer {    display: flex;
+
+.Footer {
+
+    display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #1a1a1a;
@@ -17,53 +19,58 @@ $font-size: 1.2em;
     border-top: 1px solid $primary-color;
     width: 100%;
 
-    &_Div{
-        &_Left{
+    &_Div {
+        &_Left {
             width: 90%;
             display: flex;
             justify-content: center;
             align-items: center;
             margin-left: 100px;
         }
-        &_Right{
+
+        &_Right {
             width: 10%;
             display: flex;
             justify-content: center;
             align-items: center;
         }
     }
-    &_Name{
-        font-size: 30px;
-        font-weight: 600;
-        cursor: pointer;
+
+    &_Img {
+        width: 100px;
     }
-    &_Logo{
+
+    &_Logo {
         color: $primary-color;
         text-decoration: none;
         border-radius: 50%;
         border-color: $primary-color;
         padding: 10px;
-    &:hover {
-      border-color: $tertiary-color;
+
+        &:hover {
+            border-color: $tertiary-color;
+        }
     }
-  }
 }
+
 @media (max-width: 768px) {
     .Footer {
         flex-direction: row;
         align-items: center;
+
         &_Div {
-        &_Left {
-            margin-left: 30px;
-        }
-       
+            &_Left {
+                margin-left: 30px;
+            }
+
             // margin-top: 10px;
         }
-        &_Logo{
+
+        &_Logo {
             &:hover {
                 border-color: $tertiary-color;
-              }
+            }
         }
-    
+
     }
 }

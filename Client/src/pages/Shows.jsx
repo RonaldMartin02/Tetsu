@@ -1,15 +1,176 @@
 
 import { Link, useNavigate } from 'react-router-dom';
-
+import  ThoseWhoFightThree from '../assets/Img/Those_Who_Fight_3_Banner.png';
 import ChapBlack from '../assets/Img/Chapter_Black.jpg';
 import TheRealFolkBlues from '../assets/Img/The_Real_Folk_Blues_Words.jpg';
+import FightingGold from '../assets/Img/Fighting_Gold.png';
 import './scss/Shows.scss';
 
 export default function Shows() {
     const ShowList = [
         {
+            showBanner: ThoseWhoFightThree,
+            showDate: "10/26/2024",
+            DoorsOpen: "6:30 PM",
+            showTime: "7:00 PM",
+            showLocation: "61 Center St Bristol, CT",
+            Name: "Those Who Fight 3",
+            Results: {
+                Match: {
+                    Type: "Four Way",
+                    Wrestlers: {
+                        P1: "Stan Micheal",
+                        P2: "Damien Black",
+                        P3: "Corey Duke",
+                        P4: "Alan Compass"
+                    },
+                    Winner: "TBD",
+                    videoId: ""
+                },
+                Match2: {
+                    Type: "Singles",
+                    Wrestlers: {
+                        P1: "Skylar",
+                        P2: "Nahir Rubles"
+                    },
+                    Winner: "TBD",
+                    videoId: ""
+                },
+                Match3: {
+                    Type: "Singles",
+                    Wrestlers: {
+                        P1: "Pretty Papi",
+                        P2: "Allan Bayno"
+                    },
+                    Winner: "TBD",
+                    videoId: ""
+                },
+                Match4: {
+                    Type: "Singles",
+                    Wrestlers: {
+                        P1: "Xander Litt",
+                        P2: "Dicky Moon"
+                    },
+                    Winner: "TBD",
+                    videoId: ""
+                },
+                Match5: {
+                    Type: "Tag Match",
+                    Wrestlers: {
+                        P1: "CounterStrike",
+                        P2: "Hustle & Muscle"
+                    },
+                    Winner: "TBD",
+                    videoId: ""
+                },
+                Match6: {
+                    Type: "Singles",
+                    Wrestlers: {
+                        P1: "Troy Stevens",
+                        P2: "Wrecking Ball"
+                    },
+                    Winner: "TBD",
+                    videoId: ""
+                },
+                Match7: {
+                    Type: "Singles",
+                    Wrestlers: {
+                        P1: "Ryan Fraust",
+                        P2: "Sammy Diaz"
+                    },
+                    Winner: "TBD",
+                    videoId: ""
+                },
+                Match8: {
+                    Type: "Championship",
+                    Wrestlers: {
+                        P1: "Patrick Saint",
+                        P2: "Ichiban"
+                    },
+                    Winner: "TBD",
+                    videoId: ""
+            }
+        }
+        },
+        {
+            showBanner: FightingGold,
+            showDate: "8/17/2024",
+            DoorsOpen: "6:30 PM",
+            showTime: "7:00 PM",
+            showLocation: "25 Center St Windsor, CT",
+            Name: "Fighting Gold",
+            Results: {
+                Match: {
+                    Type: "Four Way",
+                    Wrestlers: {
+                        P1: "Xander Litt",
+                        P2: "Damien Black",
+                        P3: "Smiley",
+                        P4: "TOS YoungBoy"
+                    },
+                    Winner: "Xander Litt",
+                    videoId: "https://youtu.be/HIjqLKBDZZY?si=YFcLhqh_xFNaJ1X4"
+                },
+                Match2: {
+                    Type: "Singles",
+                    Wrestlers: {
+                        P1: "Skylar",
+                        P2: "Spike"
+                    },
+                    Winner: "Skylar",
+                    videoId: "https://youtu.be/oOiu6Yexy4Q?si=YfMWemj40EZVaooy"
+                },
+                Match3: {
+                    Type: "Tag Match",
+                    Wrestlers: {
+                        P1: "The Mission",
+                        P2: "CounterStrike"
+                    },
+                    Winner: "CounterStrike",
+                    videoId: "https://youtu.be/slSptZDbYWQ?si=ulTKTad98ngKEi6H"
+                },
+                Match4: {
+                    Type: "Tag Match",
+                    Wrestlers: {
+                        P1: "Hustle & Muscle",
+                        P2: "Benny Blanco & Montilla"
+                    },
+                    Winner: "Hustle & Muscle",
+                    videoId: "https://youtu.be/Oej75TuDaE4?si=OA3A0LCH2ZwJrDdb"
+                },
+                Match5: {
+                    Type: "Singles",
+                    Wrestlers: {
+                        P1: "Sammy Diaz",
+                        P2: "Jorge Santi"
+                    },
+                    Winner: "Sammy Diaz",
+                    videoId: "https://youtu.be/e3iVlnHy8_M?si=FSuT6XJoBHWFeMn_"
+                },
+                Match6: {
+                    Type: "Singles",
+                    Wrestlers: {
+                        P1: "Troy Stevens",
+                        P2: "Ryan Fraust"
+                    },
+                    Winner: "Ryan Fraust",
+                    videoId: "https://youtu.be/LPeyIv7CJS0?si=cpaXO6lYhz6THG6I"
+                },
+                Match7: {
+                    Type: "Championship",
+                    Wrestlers: {
+                        P1: "Patrick Saint",
+                        P2: "Azrieal"
+                    },
+                    Winner: "Patrick Saint",
+                    videoId: "https://youtu.be/OWaAkp1PYdQ?si=tlEiqXnOIYTgLmWD"
+                },
+            }
+        },
+        {
             showBanner: ChapBlack,
-            showDate: "10/10/2021",
+            showDate: "6/22/2024",
+            DoorsOpen: "6:30 PM",
             showTime: "7:00 PM",
             showLocation: "25 Center St Windsor, CT",
             Name: "Chapter Black",
@@ -20,7 +181,7 @@ export default function Shows() {
                         P1: "Bobby Ocean",
                         P2: "TOS YoungBoy",
                         P3: "Damien Black",
-                        P4: "Allin Bayno"
+                        P4: "Allan Bayno"
                     },
                     Winner: "Bobby Ocean",
                     videoId: "https://www.youtube.com/watch?v=NSqv-zHy-vY"
@@ -85,6 +246,7 @@ export default function Shows() {
         {
             showBanner: TheRealFolkBlues,
             showDate: "04/25/2024",
+            DoorsOpen: "6:30 PM",
             showTime: "7:00 PM",
             showLocation: "255 West St, Bristol CT",
             Name: "The Real Folk Blues",
@@ -177,11 +339,13 @@ export default function Shows() {
                     </div>
                     <div className='Show_Info'>
                         <div className='Show_Info_Left'>
-                            <h1 className='Show_Info_Left_Date'>Date:{show.showDate}</h1>
-                            <h2 className='Show_Info_Left_Time'>showTime: {show.showTime}</h2>
+                            
+                            <h1 className='Show_Info_Left_Doors'> Doors Open : {show.DoorsOpen}</h1>
+                            <h2 className='Show_Info_Left_Time'>Bell: {show.showTime}</h2>
                         </div>
                         <div className='Show_Info_Right'>
-                            <h1 className='Show_Info_Right_Location'>showLocation: {show.showLocation}</h1>
+                            <h1 className='Show_Info_Right_Date'>Date:{show.showDate}</h1>
+                            <h1 className='Show_Info_Right_Location'>Location: {show.showLocation}</h1>
                         </div>
                     </div>
                     <div className='Show_Results'>
@@ -190,8 +354,10 @@ export default function Shows() {
                             {Object.keys(show.Results).map((matchKey) => {
                                 const match = show.Results[matchKey];
                                 if (match.Type === "Four Way") {
-                                    return (
-                                        <div className='Match' key={matchKey}>
+                                    if (match.videoId){
+
+                                        return (
+                                            <div className='Show_Results_Match' key={matchKey}>
                                             <h2 className='Show_Results_Match_Type'>{match.Type}</h2>
                                             <h3 className='Show_Results_Match_Wrestlers'>
                                                 <span className='Show_Results_Match_Wrestlers_1'>{match.Wrestlers.P1} </span>
@@ -201,7 +367,7 @@ export default function Shows() {
                                             </h3>
                                             <h4>Winner: <span className='Show_Results_Match_Winner'>{match.Winner}</span></h4>
                                             <Link to={match.videoId} target='_blank'>
-                                                <button>Go to Video</button>
+                                                <button className='Show_Results_Match_Video'>Go to Video</button>
                                             </Link>
                                         </div>
                                     );
@@ -209,17 +375,51 @@ export default function Shows() {
                                 else {
                                     return (
                                         <div className='Show_Results_Match' key={matchKey}>
+                                        <h2 className='Show_Results_Match_Type'>{match.Type}</h2>
+                                        <h3 className='Show_Results_Match_Wrestlers'>
+                                            <span className='Show_Results_Match_Wrestlers_1'>{match.Wrestlers.P1} </span>
+                                            <span className='Show_Results_Match_Wrestlers_2'>{match.Wrestlers.P2 ? `vs ${match.Wrestlers.P2}` : ''} </span>
+                                            <span className='Show_Results_Match_Wrestlers_3'>{match.Wrestlers.P3 ? `vs ${match.Wrestlers.P3}` : ''} </span>
+                                            <span className='Show_Results_Match_Wrestlers_4'>{match.Wrestlers.P4 ? `vs ${match.Wrestlers.P4}` : ''}</span>
+                                        </h3>
+                                        <h4>Winner: <span className='Show_Results_Match_Winner'>{match.Winner}</span></h4>
+                                    </div>
+                                );
+                                }
+                                }
+                                else {
+                                    if (match.videoId){
+
+                                        return (
+                                            <div className='Show_Results_Match' key={matchKey}>
                                             <h2 className='Show_Results_Match_Type'>{match.Type}</h2>
                                             <h3 className='Show_Results_Match_Wrestlers'>
                                                 <span className='Show_Results_Match_Wrestlers_1'>{match.Wrestlers.P1} </span>
-                                                <span className='Show_Results_Match_Wrestlers_2'>{match.Wrestlers.P2 ? `vs ${match.Wrestlers.P2}` : ''}</span>
+                                                <span className='Show_Results_Match_Wrestlers_2'>{match.Wrestlers.P2 ? `vs ${match.Wrestlers.P2}` : ''} </span>
+                                                <span className='Show_Results_Match_Wrestlers_3'>{match.Wrestlers.P3 ? `vs ${match.Wrestlers.P3}` : ''} </span>
+                                                <span className='Show_Results_Match_Wrestlers_4'>{match.Wrestlers.P4 ? `vs ${match.Wrestlers.P4}` : ''}</span>
                                             </h3>
                                             <h4>Winner: <span className='Show_Results_Match_Winner'>{match.Winner}</span></h4>
                                             <Link to={match.videoId} target='_blank'>
-                                                <button>Go to Video</button>
+                                            <button className='Show_Results_Match_Video'>Go to Video</button>
                                             </Link>
                                         </div>
                                     );
+                                }
+                                else {
+                                    return (
+                                        <div className='Show_Results_Match' key={matchKey}>
+                                        <h2 className='Show_Results_Match_Type'>{match.Type}</h2>
+                                        <h3 className='Show_Results_Match_Wrestlers'>
+                                            <span className='Show_Results_Match_Wrestlers_1'>{match.Wrestlers.P1} </span>
+                                            <span className='Show_Results_Match_Wrestlers_2'>{match.Wrestlers.P2 ? `vs ${match.Wrestlers.P2}` : ''} </span>
+                                            <span className='Show_Results_Match_Wrestlers_3'>{match.Wrestlers.P3 ? `vs ${match.Wrestlers.P3}` : ''} </span>
+                                            <span className='Show_Results_Match_Wrestlers_4'>{match.Wrestlers.P4 ? `vs ${match.Wrestlers.P4}` : ''}</span>
+                                        </h3>
+                                        <h4>Winner: <span className='Show_Results_Match_Winner'>{match.Winner}</span></h4>
+                                    </div>
+                                );
+                                }
                                 }
                             })}
                         </div>
