@@ -18,12 +18,11 @@ $font-size: 1.2em;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 1%;
-  width: 70%;
+  width: 100%;
 
   &_body {
     cursor: pointer;
-    width: 100%;
+    width: 70%;
     margin: 1%;
     padding: 20px;
     background-color: #1a1a1a;
@@ -54,18 +53,21 @@ $font-size: 1.2em;
     font-size: 1.6rem;
     line-height: 1.1;
     margin: auto;
+    word-wrap: break-word;
   }
 
   h4 {
     font-size: 1.2rem;
     line-height: 1.1;
     margin: 4%;
+    word-wrap: break-word;
   }
 
   p {
     font-size: 1rem;
     line-height: 1.1;
     margin: 4% 4% 0% 4%;
+    word-wrap: break-word;
   }
 
   .post_body {

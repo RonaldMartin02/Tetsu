@@ -9,7 +9,7 @@
         display: flex;
         flex-direction: row;
         &_Left{
-            border: 1px solid black;
+            // border: 1px solid black;
             display: flex;
             flex-direction: column;
             align-items: end;
@@ -23,16 +23,14 @@
             }
         }
         &_Right{
-            border: 1px solid black;
+            // border: 1px solid black;
             display: flex;
             flex-direction: column;
-            align-items: start;
-            justify-content: start;
             width: 50%;
             &_Type{
                 font-size: 2rem;
                 font-weight: bold;
-                border: 1px solid black;
+                // border: 1px solid black;
                 padding: 10px;
             }
             &_Name{
@@ -52,7 +50,7 @@
         // margin-bottom: 50px;
         &_Left{
             display: flex;
-            // width: 50%;
+            width: 50%;
             flex-direction: row;
             // align-items: center;
             justify-content: center;
@@ -64,17 +62,17 @@
         }
         &_Right{
             display: flex;
-            // width: 50%;
+            width: 50%;
             flex-direction: row;
             // align-items: start;
             // justify-content: start;
-            border: 4px solid black;
-            padding-left: 1.25rem;
-            padding-right: 1.25rem;
-
+            // border: 4px solid black;
+            // padding-left: 1.25rem;
+            // padding-right: 1.25rem;
+            // width: ;
             margin: 10px;
             &_Name{
-                font-size: 3em;
+                // font-size: ;
                 font-weight: bold;
             }
         }
@@ -86,23 +84,16 @@
         align-items: center;
         margin-top: 50px;
         margin-bottom: 50px;
-        
+        width: 100%;
     }
 }
 
 @media (max-width: 768px) {
     .Roster {
     flex-direction: column;
+    align-items: center;
+    width: 80%
   }
-    // .Roster_Champ{
-    //     flex-direction: column;
-    // }
-    .Roster_Wrestlers{
-        flex-direction: column;
-    }
-    .Grouped{
-        flex-direction: column;
-    }
     .Roster_Group{
         flex-direction: column;
 
