@@ -24,7 +24,7 @@ export default function Shows() {
                         P3: "Corey Duke",
                         P4: "Alan Compass"
                     },
-                    Winner: "TBD",
+                    Winner: "Damien Black",
                     videoId: ""
                 },
                 Match2: {
@@ -33,7 +33,7 @@ export default function Shows() {
                         P1: "Skylar",
                         P2: "Nahir Rubles"
                     },
-                    Winner: "TBD",
+                    Winner: "Skylar",
                     videoId: ""
                 },
                 Match3: {
@@ -42,7 +42,7 @@ export default function Shows() {
                         P1: "Pretty Papi",
                         P2: "Allan Bayno"
                     },
-                    Winner: "TBD",
+                    Winner: "Pretty Papi",
                     videoId: ""
                 },
                 Match4: {
@@ -51,16 +51,16 @@ export default function Shows() {
                         P1: "Xander Litt",
                         P2: "Dicky Moon"
                     },
-                    Winner: "TBD",
+                    Winner: "Xander Litt",
                     videoId: ""
                 },
                 Match5: {
-                    Type: "Tag Match",
+                    Type: "Tag Match Championship Match",
                     Wrestlers: {
                         P1: "CounterStrike",
                         P2: "Hustle & Muscle"
                     },
-                    Winner: "TBD",
+                    Winner: "Hustle & Muscle",
                     videoId: ""
                 },
                 Match6: {
@@ -69,7 +69,7 @@ export default function Shows() {
                         P1: "Troy Stevens",
                         P2: "Wrecking Ball"
                     },
-                    Winner: "TBD",
+                    Winner: "Wrecking Ball",
                     videoId: ""
                 },
                 Match7: {
@@ -78,7 +78,7 @@ export default function Shows() {
                         P1: "Ryan Fraust",
                         P2: "Sammy Diaz"
                     },
-                    Winner: "TBD",
+                    Winner: "Sammy Diaz",
                     videoId: ""
                 },
                 Match8: {
@@ -87,7 +87,7 @@ export default function Shows() {
                         P1: "Patrick Saint",
                         P2: "Ichiban"
                     },
-                    Winner: "TBD",
+                    Winner: "Patrick Saint",
                     videoId: ""
             }
         }
