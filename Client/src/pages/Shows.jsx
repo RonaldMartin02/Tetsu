@@ -260,7 +260,7 @@ export default function Shows() {
                         P4: "Dash"
                     },
                     Winner: "Jorge Santi",
-                    videoId:"https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley"
+                    videoId:"https://youtu.be/vXOw06CABPo?si=bmY3kHoeY7fVmlVN"
                                 },
                 Match2: {
                     Type: "Singles",
@@ -269,7 +269,7 @@ export default function Shows() {
                         P2: "Pretty Papi"
                     },
                     Winner: "Pretty Papi",
-                    videoId:"https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley"
+                    videoId:"https://youtu.be/eXFBMCi7vng?si=wxitfTXaa61kuNtX"
                 },
                 Match3: {
                     Type: "Singles",
@@ -278,7 +278,7 @@ export default function Shows() {
                         P2: "Danny Atom"
                     },
                     Winner: "Stan Micheal",
-                    videoId:"https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley"
+                    videoId:"https://youtu.be/XU4O37rEPK0?si=YerDTGODwAebonk1"
                 },
                 Match4: {
                     Type: "Tag Match",
@@ -287,7 +287,7 @@ export default function Shows() {
                         P2: "God's Greatest Creation"
                     },
                     Winner: "God's Greatest Creation",
-                    videoId:"https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley"
+                    videoId:"https://youtu.be/SJprnNMBEcI?si=JPwf_9eL-40VznBr"
                 },
                 Match5: {
                     Type: "Singles",
@@ -296,7 +296,7 @@ export default function Shows() {
                         P2: "Patrick Saint",
                     },
                     Winner: "Patrick Saint",
-                    videoId:"https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley"
+                    videoId:"https://youtu.be/hx7VoHdkrQE?si=cBuDeoIzL07XupI_"
                 },
                 Match6: {
                     Type: "Singles",
@@ -305,7 +305,7 @@ export default function Shows() {
                         P2: "Sammy Diaz",
                     },
                     Winner: "Sammy Diaz",
-                    videoId:"https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley"
+                    videoId:"https://youtu.be/1x2MlH7AFOI?si=06ITWAeZMO3bm6lb"
                 },
                 Match7: {
                     Type: "Tag Team",
@@ -314,16 +314,16 @@ export default function Shows() {
                         P2: "Cold Cash",
                     },
                     Winner: "Lucas Chase",
-                    videoId:"https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley"
+                    videoId:"https://youtu.be/hW9KVRm7QMk?si=zOEWYVqiNw3A9Kwc"
                 },
                 Match8: {
-                    Type: "Singles",
+                    Type: "Championship",
                     Wrestlers: {
                         P1: "Troy Stevens",
-                        P2: "",
+                        P2: "Azrieal",
                     },
                     Winner: "Troy Stevens",
-                    videoId:"https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley"
+                    videoId:"https://youtu.be/B2R9Okv658Q?si=JI1_Js35to1XMQZL"
                 },
             }
         }
