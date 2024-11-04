@@ -240,7 +240,6 @@ export default function Shows() {
                     Winner: "Patrick Saint",
                     videoId: "https://www.youtube.com/watch?v=nGokTN5JQsA"
                 },
-
             }
         },
         {
