@@ -96,18 +96,18 @@ export default function EditPost() {
                         name='postTitle' />
 
                     <input
-                        placeholder='Image Link'
+                        placeholder={data?.post.imgLink}
                         value={postImgLink}
                         className='Submit_form_Img_Link'
                         onChange={handleChange}
                         name='postImgLink'
-                         />
+                        />
 
                     <textarea
                         id="postText"
                         className='Submit_form_text'
                         name="postText"
-                        placeholder="Here is a new post..."
+                        placeholder={data?.post.body}
                         value={postText}
                         rows="4"
                         onChange={handleChange}
