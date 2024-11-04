@@ -14,7 +14,7 @@ export default function Shows() {
             DoorsOpen: "6:30 PM",
             showTime: "7:00 PM",
             showLocation: "61 Center St Bristol, CT",
-            Name: "Those Who Fight 3",
+            showName: "Those Who Fight 3",
             Results: {
                 Match: {
                     Type: "Four Way",
@@ -98,7 +98,7 @@ export default function Shows() {
             DoorsOpen: "6:30 PM",
             showTime: "7:00 PM",
             showLocation: "25 Center St Windsor, CT",
-            Name: "Fighting Gold",
+            showName: "Fighting Gold",
             Results: {
                 Match: {
                     Type: "Four Way",
@@ -173,7 +173,7 @@ export default function Shows() {
             DoorsOpen: "6:30 PM",
             showTime: "7:00 PM",
             showLocation: "25 Center St Windsor, CT",
-            Name: "Chapter Black",
+            showName: "Chapter Black",
             Results: {
                 Match: {
                     Type: "Four Way",
@@ -248,7 +248,7 @@ export default function Shows() {
             DoorsOpen: "6:30 PM",
             showTime: "7:00 PM",
             showLocation: "255 West St, Bristol CT",
-            Name: "The Real Folk Blues",
+            showName: "The Real Folk Blues",
             Results: {
                 Match: {
                     Type: "Four Way",
@@ -328,13 +328,12 @@ export default function Shows() {
         }
     ];
     return (
-
         <div className='Shows'>
             {ShowList.map((show) => (
                 <div className='Show'>
                     <div className='Show_Header'>
                         <img className='Show_Header_Img' src={show.showBanner} alt="Temp" />
-                        <h2 className='Show_Header_Name'>{show.Name}</h2>
+                        <h2 className='Show_Header_Name'>{show.showName}</h2>
                     </div>
                     <div className='Show_Info'>
                         <div className='Show_Info_Left'>

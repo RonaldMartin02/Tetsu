@@ -20,8 +20,6 @@ export default function Post() {
         variables: { postId: postId },
     });
     const post = data?.post || {};
-    const comments = post.comments || [];
-    // console.log(comments);
     const [removePost, { error }] = useMutation(REMOVE_POST,
         {
             refetchQueries:
@@ -44,38 +42,6 @@ export default function Post() {
         } catch (err) {
             console.error(err);
         }
-    }
-    const handleComment = async (event) => {
-        event.preventDefault();
-        console.log('comment');
-        try {
-            
-        console.log(event.target[0].value);
-            const comBody = event.target[0].value;
-            // const username = Auth.getProfile().data.username;
-            console.log(comBody);
-            const { data } = await addComment({
-                variables: {
-                    postId: postId,
-                    commentBody: comBody,
-                    username: Auth.getProfile().data.username
-                },
-            });
-            console.log(data);
-        } catch (err) {
-            console.error(err);
-        }
-    }
-    const handleChange = (event) => {
-        const { name, value } = event.target;
-
-        if (name === 'commentBody') {
-         setComBody
-(value);
-        } 
-        // else if (name === 'genre') {
-        //     setGenre(value);
-        // }
     }
     if (loading) {
         return <div>Loading...</div>;

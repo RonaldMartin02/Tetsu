@@ -44,12 +44,16 @@ const router = createBrowserRouter(
         element: <EditPost />,
       },
       {
-        path: '/LogIn',
-        element: <LogIn />,
+        path: '/Shows',
+        element: <Shows />,
       },
       {
-        path: '/SignUp',
-        element: <SignUp />,
+        path: '/Shows/Create',
+        element: <CreateShow />,
+      },
+      {
+        path: '/Shows/Edit/:showId',
+        element: <EditShow />,
       },
       {
         path: '/Roster',
@@ -64,8 +68,12 @@ const router = createBrowserRouter(
         element: <Cart />,
       },
       {
-        path: '/Shows',
-        element: <Shows />,
+        path: '/LogIn',
+        element: <LogIn />,
+      },
+      {
+        path: '/SignUp',
+        element: <SignUp />,
       },
     ],
     },

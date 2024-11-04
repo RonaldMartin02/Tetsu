@@ -6,6 +6,7 @@ const wrestlersSchema = new Schema({
         required: true
     },
 });
+
 const matchSchema = new Schema({
 matchType: {
     type: String,
@@ -27,6 +28,10 @@ const showSchema = new Schema({
         required: true
     },
     showDate: {
+        type: String,
+        required: true
+    },
+    DoorsOpen: {
         type: String,
         required: true
     },
