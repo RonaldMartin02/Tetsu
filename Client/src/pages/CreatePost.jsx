@@ -31,7 +31,6 @@ export default function CreatePost() {
                     title: postTitle,
                     body: postText,
                     imgLink: postImgLink,
-                    // genre: genre,
                     username: Auth.getProfile().data.username,
                 },
             });
@@ -56,9 +55,6 @@ export default function CreatePost() {
         } else if (name === 'postImgLink') {
             setPostImgLink(value);
         }
-        // else if (name === 'genre') {
-        //     setGenre(value);
-        // }
     }
 
     return (
