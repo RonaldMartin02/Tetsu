@@ -1,7 +1,19 @@
 const { Schema, model } = require('mongoose');
 
-const wrestlersSchema = new Schema({
-    wrestlerName: {
+const WrestlersSchema = new Schema({
+    wrestlerOne: {
+        type: String,
+        required: true
+    },
+    wrestlerTwo: {
+        type: String,
+        required: true
+    },
+    wrestlerThree: {
+        type: String,
+        required: true
+    },
+    wrestlerFour: {
         type: String,
         required: true
     },

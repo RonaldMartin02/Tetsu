@@ -21,6 +21,7 @@ export default function CreateShow() {
             'getShows'
         ]
     })
+    
 
     const handleSubmit = async (e) => {
     try {
@@ -43,9 +44,8 @@ export default function CreateShow() {
     }
     }
 
-    const handleAddMatch = async (e) => {
-    e.preventDefault()  
-    
+    const handleAddMatch = async (Match) => {    
+
     }
     const handleMatchTypeChange = (event) => {
         setMatchType(event.target.value);
@@ -106,11 +106,7 @@ export default function CreateShow() {
             <form>
                 <div>
                 <label htmlFor='showName'>Show Name</label>
-                <input type='text' id='showName' value={showName} onChange={(e) => setShowName(e.target.value)} />
-                <label htmlFor='showBanner'>Show Banner</label>
-                <input type='text' id='showBanner' value={showBanner} onChange={(e) => setShowBanner(e.target.value)} />
-                </div>
-                <div>
+                <input type='text' id='showName' value={showName} onChange={(e) => setShowName(e.target.value)} /> 
                 <label htmlFor='showDate'>Show Date</label>
                 <input type='text' id='showDate' value={showDate} onChange={(e) => setShowDate(e.target.value)} />
                 <label htmlFor='showTime'>Show Time</label>

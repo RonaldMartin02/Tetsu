@@ -37,13 +37,16 @@ type Show{
 type Match{
     _id: ID
     matchType: String
-    wrestlers: [Wrestler]
+    wrestlers: [Wrestlers]
     matchWinner: String
     videoId: String
 }
-type Wrestler{
+type Wrestlers{
     _id: ID
-    wrestlerName: String
+    wrestlerOne: String
+    wrestlerTwo: String
+    wrestlerThree: String
+    wrestlerFour: String
 }
 
 type Query {
