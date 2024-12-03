@@ -37,7 +37,7 @@ type Show{
 type Match{
     _id: ID
     matchType: String
-    wrestlers: [Wrestlers]
+    Wrestlers: [Wrestlers]
     matchWinner: String
     videoId: String
 }
@@ -60,8 +60,8 @@ type Query {
     show(showId: ID!): Show
     matches: [Match]
     match(matchId: ID!): Match
-    wrestlers: [Wrestler]
-    wrestler(wrestlerId: ID!): Wrestler
+    Wrestlers: [Wrestlers]
+    wrestler(wrestlerId: ID!): Wrestlers
     }
 type Mutation {
     login(email: String!, password: String!): Auth
@@ -119,9 +119,9 @@ type Mutation {
     addMatch(matchType: String!, wrestlers: [String], matchWinner: String!, videoId: String!): Match
     editMatch(_id: ID!, matchType: String, wrestlers: [String], matchWinner: String, videoId: String): Match
     removeMatch(matchId: ID!): Match
-    addWrestler(wrestlerName: String!): Wrestler
-    editWrestler(_id: ID!, wrestlerName: String): Wrestler
-    removeWrestler(wrestlerId: ID!): Wrestler
+    addWrestler(wrestlerName: String!): Wrestlers
+    editWrestler(_id: ID!, wrestlerName: String): Wrestlers
+    removeWrestler(wrestlerId: ID!): Wrestlers
     }
 
 `;

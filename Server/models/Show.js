@@ -1,6 +1,6 @@
 const { Schema, model } = require('mongoose');
 
-const WrestlersSchema = new Schema({
+const wrestlersSchema = new Schema({
     wrestlerOne: {
         type: String,
         required: true

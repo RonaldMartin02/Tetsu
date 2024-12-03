@@ -1,6 +1,6 @@
 const { Schema, model } = require('mongoose');
 
-const wrestlerSchema = new Schema({
+const employeeSchema = new Schema({
     wrestlerName: {
         type: String,
         required: true
@@ -15,6 +15,6 @@ const wrestlerSchema = new Schema({
     },
 });
 
-const Wrestler = model('Wrestler', wrestlerSchema);
+const Wrestler = model('Wrestler', employeeSchema);
 
 module.exports = Wrestler;
